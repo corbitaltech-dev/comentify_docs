@@ -1,0 +1,124 @@
+---
+title: "Connect Instagram and Facebook to Comentify"
+sidebarTitle: "Connect Accounts"
+description: "Link your Instagram Professional account or Facebook Page to Comentify using Meta's secure OAuth authorization — no credentials stored."
+---
+
+Comentify connects to Instagram and Facebook through Meta's official OAuth 2.0 authorization flow. When you authorize Comentify, Meta issues a secure access token that grants only the specific permissions you approve — your Meta username, password, and personal credentials are never seen or stored by Comentify. You can revoke access at any time from either Comentify's settings or directly from your Meta security settings.
+
+## Prerequisites
+
+Before connecting an account, make sure you meet the following requirements:
+
+- **Instagram** — Your account must be an **Instagram Professional account** (Business or Creator). Personal profiles are not supported by Meta's API and cannot be connected. [Learn how to switch to a Professional account →](https://help.instagram.com/502981923235522)
+- **Facebook** — You must own or administer a **Facebook Page**. Personal Facebook profiles cannot be connected.
+- **Facebook Link (Instagram only)** — Your Instagram Professional account must be [linked to a Facebook Page](https://help.instagram.com/570895513091465) to authenticate through Meta's platform.
+
+---
+
+## Connect your Instagram account
+
+<Steps>
+  <Step title="Open Connected Accounts">
+    In Comentify, click **Settings** in the left sidebar, then select **Connected Accounts**.
+  </Step>
+
+  <Step title="Start the Instagram connection">
+    Click the **Connect Instagram** button. Comentify will redirect you to Meta's authorization screen.
+  </Step>
+
+  <Step title="Authorize Comentify on Meta">
+    Log in with the Facebook account linked to your Instagram Professional profile (if you aren't already logged in). Review the list of requested permissions and click **Allow** to grant access. You'll be redirected back to Comentify automatically.
+  </Step>
+
+  <Step title="Select your Instagram account">
+    If your Facebook account is linked to more than one Instagram Professional account, a picker will appear. Select the account you want to manage with Comentify and click **Confirm**.
+  </Step>
+</Steps>
+
+---
+
+## Connect your Facebook Page
+
+<Steps>
+  <Step title="Open Connected Accounts">
+    In Comentify, click **Settings** in the left sidebar, then select **Connected Accounts**.
+  </Step>
+
+  <Step title="Start the Facebook connection">
+    Click the **Connect Facebook Page** button. You'll be redirected to Meta's authorization screen.
+  </Step>
+
+  <Step title="Authorize Comentify on Meta">
+    Log in with the Facebook account that administers your Page (if you aren't already logged in). Review the requested permissions and click **Allow**.
+  </Step>
+
+  <Step title="Select your Facebook Page">
+    Choose the Facebook Page you want to connect from the list and click **Confirm**. If you manage multiple Pages, you can repeat this process to connect additional ones.
+  </Step>
+</Steps>
+
+---
+
+## Manage connected accounts
+
+After connecting one or more accounts, you can view and manage them all from **Settings → Connected Accounts**.
+
+| Action | How to do it |
+|---|---|
+| **View connected accounts** | All connected Instagram accounts and Facebook Pages are listed with their connection status and the date they were authorized. |
+| **Reconnect an account** | If an account shows a **Reconnection required** status, click **Reconnect** next to it and complete the OAuth flow again. This is common after a Meta password change or permission revocation. |
+| **Disconnect an account** | Click the **⋯** menu next to the account and select **Disconnect**. You'll be asked to confirm before the connection is removed. |
+
+<Warning>
+  **Disconnecting an account pauses all active automations tied to it.** Comment reply rules, DM automations, and workflows associated with the disconnected account will stop running immediately. Any in-progress workflow steps will be abandoned. Reconnecting the account will resume automations, but events that occurred while it was disconnected will not be retroactively processed.
+</Warning>
+
+---
+
+## Required Meta permissions
+
+Comentify requests only the Meta permission scopes necessary to power its features. When you authorize via OAuth, you'll see these listed on Meta's consent screen:
+
+- `instagram_basic` — read your Instagram profile and media
+- `instagram_manage_comments` — read and reply to comments on your posts
+- `instagram_manage_messages` — send and receive Instagram Direct Messages
+- `pages_messaging` — send and receive messages on your Facebook Page
+- `pages_read_engagement` — read comments and engagement on your Facebook Page
+- `pages_manage_posts` — required for certain automation triggers on Facebook
+
+<Note>
+  Meta may display additional platform-level permissions during the authorization flow. These are standard Meta requirements and are not used beyond what is described above. For the full breakdown of what each scope permits, see [Meta's permissions reference →](https://developers.facebook.com/docs/permissions)
+</Note>
+
+---
+
+## Troubleshooting
+
+<Accordion title="I don't see my Instagram account after authorizing">
+  Only **Instagram Professional accounts** (Business or Creator) appear in the account picker. Personal profiles are excluded by Meta's API. To fix this:
+
+  1. Open the Instagram app and go to **Settings → Account**.
+  2. Tap **Switch to Professional Account** and follow the prompts.
+  3. Make sure the Professional account is [linked to a Facebook Page](https://help.instagram.com/570895513091465).
+  4. Return to Comentify and try connecting again.
+</Accordion>
+
+<Accordion title="Authorization failed or I was redirected back with an error">
+  Authorization failures are usually caused by one of the following:
+
+  - **Permissions denied** — If you declined any permission on Meta's consent screen, the connection cannot be completed. Click **Connect Instagram** or **Connect Facebook Page** again and make sure to click **Allow** for all requested permissions.
+  - **Wrong Facebook account** — You may have logged in with a Facebook account that isn't linked to the Instagram Professional account or Page you want to connect. Log out of Facebook in your browser, then start the connection flow again with the correct account.
+  - **Pop-up or cookie blocker** — Some browser extensions block the OAuth redirect. Try the connection in an incognito window or a different browser.
+  - **Meta session issue** — Log out of Facebook entirely, clear your browser cookies, log back in, and retry.
+
+  If the error persists, contact [Comentify support](https://comentify.io/support) with the error message shown on screen.
+</Accordion>
+
+<Accordion title="My Facebook Page isn't listed in the Page picker">
+  Only Pages where you hold an **Admin role** are shown. Editor, Moderator, and other roles are not sufficient. To check your role:
+
+  1. Go to your Facebook Page and click **Settings → Page Roles** (or **Page Access** in the new Pages experience).
+  2. Confirm your account is listed as **Admin**.
+  3. If not, ask the current Page Admin to grant you Admin access, then retry the connection.
+</Accordion>

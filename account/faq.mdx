@@ -1,0 +1,85 @@
+---
+title: "Frequently Asked Questions about Comentify"
+sidebarTitle: "FAQ"
+description: "Answers to the most common questions about Comentify — covering account setup, Meta connections, automation limits, billing, and troubleshooting."
+---
+
+Whether you're setting up Comentify for the first time or troubleshooting an unexpected issue, this page collects the questions our users ask most often. Browse the sections below to find quick, clear answers — and if something isn't covered here, reach out to our support team at [support@comentify.io](mailto:support@comentify.io).
+
+## Account & Getting Started
+
+<Accordion title="What social platforms does Comentify support?">
+  Comentify currently supports **Instagram Professional accounts** (Creator and Business profiles) and **Facebook Pages**. Personal Instagram profiles and Facebook personal timelines are not supported because Meta's API only grants the necessary permissions to professional account types.
+</Accordion>
+
+<Accordion title="Do I need a developer account to use Comentify?">
+  No. Comentify connects to Instagram and Facebook through a standard OAuth flow — you simply log in with your Facebook credentials and grant the required permissions. You do not need to create a Meta developer app or go through any technical setup.
+</Accordion>
+
+<Accordion title="Can I use Comentify with a personal Instagram profile?">
+  No. Meta's API restricts comment and messaging access to **Instagram Professional accounts** only. If you currently have a personal profile, you can switch it to a Professional account for free inside the Instagram app under **Settings → Account → Switch to Professional Account** — this does not delete any of your existing content or followers.
+</Accordion>
+
+## Automation
+
+<Accordion title="How quickly does automation trigger after a comment?">
+  In most cases, Comentify detects a new comment and triggers the automation **within seconds**. The exact speed depends on Meta's webhook delivery time, which is typically near-instant but can occasionally take up to a minute during periods of high load on Meta's infrastructure.
+</Accordion>
+
+<Accordion title="Can I use automations on old posts?">
+  Yes — as long as the Instagram or Facebook account is actively connected to Comentify, automations apply to **all posts on that account**, including ones published before you set up the automation. Any new comment left on an old post will trigger the relevant automation just as it would on a new post.
+</Accordion>
+
+<Accordion title="Is there a limit on how many automations I can create?">
+  Yes, the number of active automations depends on your plan. The **Starter** plan allows up to 5 automations, **Growth** allows up to 20, and **Business** and **Enterprise** plans include unlimited automations. If you reach your plan's limit, you'll need to either deactivate an existing automation or upgrade your plan before creating a new one. See the [Plans](/account/plans) page for a full feature comparison.
+</Accordion>
+
+<Accordion title="What happens if Meta's API is down?">
+  If Meta experiences an outage or degrades their API, Comentify cannot receive webhook events or send DMs during that window. Any comments made while the API is unavailable **will not retroactively trigger automations** once service is restored. You can monitor Meta's platform status at [developers.facebook.com/status](https://developers.facebook.com/status). Our team also posts updates on service disruptions to the Comentify status page.
+</Accordion>
+
+## Billing & Plans
+
+<Accordion title="Can I try Comentify before paying?">
+  Yes — Comentify offers a free trial so you can explore the platform before committing to a paid plan. Visit [comentify.io/pricing](https://comentify.io/pricing) to see current trial terms and start your free trial. No credit card is required to begin.
+</Accordion>
+
+<Accordion title="What happens to my data if I cancel?">
+  When you cancel, your plan remains active until the end of the current billing period. After that, your workspace enters a **read-only state** — automations stop running, but your data (conversation history, leads, and analytics) is retained for **90 days**. During that window you can log in and export anything you need. After 90 days, your data is permanently deleted. If you reactivate within the 90-day window, everything is restored exactly as you left it.
+</Accordion>
+
+<Accordion title="Can I change plans at any time?">
+  Yes. You can upgrade or downgrade your plan at any time from **Settings → Billing**. Upgrades take effect immediately and are prorated for the remainder of your billing cycle. Downgrades take effect at the end of the current billing period — you keep your existing plan's features until then. Be aware that downgrading to a plan with lower limits may pause automations if your usage exceeds the new plan's caps. See the [Plans](/account/plans) page for details.
+</Accordion>
+
+## Troubleshooting
+
+<Accordion title="My automations stopped working — what should I check?">
+  Work through this checklist in order:
+
+  1. **Check the connection status** — Go to **Settings → Connected Accounts** and confirm the affected Instagram or Facebook account shows as **Active**. If it shows as expired or errored, reconnect it.
+  2. **Check automation status** — Go to **Automations** and confirm the automation is toggled **On**. Automations can be automatically paused if you exceed your plan's limits.
+  3. **Review your plan limits** — If you've hit your automation or account limit, some automations may have been paused. Upgrade your plan or deactivate unused automations.
+  4. **Check Meta's API status** — Visit [developers.facebook.com/status](https://developers.facebook.com/status) to see if there is an ongoing outage.
+  5. **Review automation error logs** — Click into the automation and open the **Activity** tab to see a log of recent trigger attempts and any error messages.
+
+  If none of the above resolves the issue, contact [support@comentify.io](mailto:support@comentify.io) with your workspace name and the name of the affected automation.
+</Accordion>
+
+<Accordion title="I'm not receiving DMs from comment triggers — what should I check?">
+  If your automation is triggering correctly but the DM isn't being delivered, check the following:
+
+  - **Instagram's 24-hour messaging window** — Instagram only allows businesses to send a DM to a user if that user has messaged your account within the last 24 hours, *or* if they have explicitly opted in (for example, by commenting with a keyword that triggers an automation reply). If the user has never interacted with your account via DM and the 24-hour window has closed, Instagram's API will block the message delivery.
+  - **User's DM settings** — Some users restrict who can send them DMs. If their privacy settings block messages from accounts they don't follow, the DM will fail silently.
+  - **Connected account permissions** — Confirm that Comentify has been granted the `instagram_manage_messages` permission. Reconnect the account from **Settings → Connected Accounts** if you're unsure.
+</Accordion>
+
+<Accordion title="A team member can't see the inbox — what should I check?">
+  Inbox visibility is controlled by **role permissions**. Check the following:
+
+  1. Go to **Settings → Team** and confirm the team member has been added to the workspace.
+  2. Review the role assigned to them. The **Viewer** role does not include inbox access — they need at least the **Agent** role to view and respond to conversations.
+  3. If inbox access is limited to specific accounts or inboxes, confirm the team member has been assigned to the relevant accounts under **Settings → Team → [Member Name] → Account Access**.
+
+  If the issue persists after checking permissions, ask the team member to sign out and sign back in to refresh their session.
+</Accordion>

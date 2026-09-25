@@ -1,0 +1,101 @@
+---
+title: "Build Multi-Step Engagement Workflows"
+sidebarTitle: "Workflows"
+description: "Use Comentify's visual workflow builder to create multi-step sequences — combine comment replies, DMs, lead capture, and team assignments in one flow."
+---
+
+Workflows let you design complete engagement sequences from a single canvas. Instead of managing separate rules for replies, DMs, and lead capture, you connect actions visually and Comentify executes the entire chain automatically whenever a trigger fires.
+
+## Workflows vs. Simple Automations
+
+Simple automations — [comment replies](/automation/comment-replies) and [DM automation](/automation/dm-automation) — each perform one action in response to one trigger. Workflows go further by chaining multiple actions together, adding conditional branches, and coordinating across your whole team.
+
+| | Simple Automations | Workflows |
+|---|---|---|
+| **Actions per rule** | One | Unlimited |
+| **Branching logic** | No | Yes |
+| **Time delays** | No | Yes (Wait step) |
+| **Team assignment** | No | Yes |
+| **Lead capture** | No | Yes |
+
+Use simple automations for quick, single-step responses. Use workflows when you need a full sequence — for example, reply publicly, send a DM, capture the lead, and route it to sales, all from one comment.
+
+## Workflow Triggers
+
+Every workflow starts with a trigger — the event that kicks off the sequence.
+
+<Accordion title="Comment Received">
+  The workflow starts when any new comment is posted on a selected post or across all posts on a connected account.
+</Accordion>
+
+<Accordion title="Keyword Matched">
+  The workflow starts when a comment contains a specific word or phrase. You can define multiple keywords; the workflow fires if any one of them matches.
+</Accordion>
+
+<Accordion title="DM Received">
+  The workflow starts when a user sends a direct message to your Instagram or Facebook inbox, allowing you to automate responses to inbound DMs.
+</Accordion>
+
+## Available Actions
+
+After a trigger fires, you can stack any combination of the following actions:
+
+| Action | What It Does |
+|---|---|
+| **Send DM** | Sends a direct message to the user who triggered the workflow |
+| **Reply to Comment** | Posts a public reply on the triggering comment |
+| **Assign to Team Member** | Routes the conversation to a specific agent in your shared inbox |
+| **Add Tag** | Applies a label to the contact for filtering and segmentation |
+| **Capture Lead** | Saves the contact's details to your Leads list |
+| **Wait** | Pauses the workflow for a set time (minutes, hours, or days) before continuing |
+| **Send Follow-up DM** | Sends a second direct message after a delay, useful for nurture sequences |
+
+## Build a Workflow
+
+<Steps>
+  <Step title="Open the Workflow Builder">
+    Go to **Automations** → **Workflows** and click **New Workflow**. Give your workflow a descriptive name so you can find it easily later.
+  </Step>
+  <Step title="Choose a Trigger">
+    Select the event that starts the workflow: **Comment Received**, **Keyword Matched**, or **DM Received**. Configure the trigger details — such as the target post and any keywords — in the panel on the right.
+  </Step>
+  <Step title="Add Actions">
+    Click the **+** button below the trigger node to add your first action. Choose an action from the menu, configure it in the side panel, then click **+** again to add the next step. Repeat until your sequence is complete.
+  </Step>
+  <Step title="Configure Each Action">
+    Click any action node to edit its settings. For **Send DM** and **Reply to Comment**, write your message and add personalization variables like `{first_name}` or `{comment_text}`. For **Wait**, set the delay duration. For **Assign to Team Member**, select the agent from the dropdown.
+  </Step>
+  <Step title="Add Conditions or Branches (Optional)">
+    To create different paths based on user behavior, click **+ Add Condition** on any action node. For example, branch on whether the user already exists as a lead, or whether the comment contains a second keyword. Each branch continues independently.
+  </Step>
+  <Step title="Activate the Workflow">
+    When your sequence is ready, toggle the workflow to **Active** and click **Save**. Comentify will begin running the workflow on all matching triggers immediately.
+  </Step>
+</Steps>
+
+<Tip>
+  Before activating a workflow on a public post, test it using a **private or archived post** that only you can see. Comment on the post yourself to walk through every step of the sequence and confirm that messages, delays, and assignments all behave as expected. Switch the workflow to your live post only after you're satisfied with the results.
+</Tip>
+
+## Example Workflow: Comment-to-Lead
+
+Here's a real-world workflow you can model yours after. A follower comments "info" on a product post and the entire funnel runs automatically:
+
+1. **Trigger** — Keyword `"info"` matched on the product post
+2. **Reply to Comment** — Posts publicly: `"Hey {first_name}, check your DMs for the details! 📩"`
+3. **Send DM** — Delivers the product page link and a 10% discount code
+4. **Wait** — Pauses for 1 hour
+5. **Capture Lead** — Saves the follower's name and contact to the Leads list
+6. **Assign to Team Member** — Routes the conversation to the sales team in the shared inbox
+7. **Send Follow-up DM** — 24 hours later, sends a reminder: `"Hey {first_name}, just checking in — any questions about the offer?"`
+
+This workflow turns a single comment into a fully qualified lead with zero manual effort.
+
+## Manage Your Workflows
+
+All workflows are listed under **Automations** → **Workflows**. From the list you can:
+
+- **Pause / Resume** — Toggle the status switch to stop a workflow without deleting it. Paused workflows retain their configuration and run history.
+- **Duplicate** — Click the **⋯** menu and select **Duplicate** to copy a workflow as a starting point for a new one. The duplicate opens in the builder as a draft.
+- **View Run History** — Click **Run History** on any workflow to see a log of every execution: when it fired, which user triggered it, which actions completed, and any errors encountered.
+- **Delete** — Select **Delete** from the **⋯** menu. Deleted workflows and their run history are permanently removed and cannot be recovered.

@@ -1,0 +1,86 @@
+{
+  "projectType": "saas",
+  "projectName": "Comentify",
+  "projectDescription": "Comentify is a hosted Instagram and Facebook engagement-automation platform that helps businesses turn social comments and messages into leads and conversations.",
+  "theme": "almond",
+  "primaryColor": "#5048e5",
+  "lightColor": "#120b43",
+  "darkColor": "#c4c4c4",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "connecting-accounts"
+            ]
+          },
+          {
+            "group": "Automation",
+            "pages": [
+              "automation/comment-replies",
+              "automation/dm-automation",
+              "automation/workflows"
+            ]
+          },
+          {
+            "group": "Inbox & Contacts",
+            "pages": [
+              "inbox/shared-inbox",
+              "inbox/contacts",
+              "inbox/lead-capture"
+            ]
+          },
+          {
+            "group": "AI Features",
+            "pages": [
+              "ai/overview",
+              "ai/ai-replies"
+            ]
+          },
+          {
+            "group": "Analytics & Team",
+            "pages": [
+              "analytics/overview",
+              "team/team-access"
+            ]
+          },
+          {
+            "group": "Account & Billing",
+            "pages": [
+              "account/plans",
+              "account/settings",
+              "account/faq"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Connect Instagram professional accounts and Facebook Pages via Meta authorization",
+    "Comment-to-message (DM) automation triggered by post comments",
+    "Automated comment and direct message replies",
+    "Visual workflow builder for multi-step engagement sequences",
+    "Shared inbox for team collaboration on conversations",
+    "Contacts and lead capture from social interactions",
+    "Analytics and performance reporting",
+    "Team access and role management",
+    "AI-assisted reply suggestions and automation"
+  ],
+  "publicApiSurface": [
+    "Meta OAuth authorization flow (Instagram & Facebook account connection)",
+    "Comment automation rules",
+    "DM automation rules",
+    "Workflow builder",
+    "Shared inbox",
+    "Contact management",
+    "Analytics dashboard",
+    "Team member management",
+    "AI reply assistant"
+  ]
+}

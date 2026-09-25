@@ -1,0 +1,82 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "name": "Comentify",
+  "theme": "almond",
+  "colors": {
+    "primary": "#5048e5",
+    "light": "#120b43",
+    "dark": "#c4c4c4"
+  },
+  "logo": {
+    "light": "https://media.brand.dev/ca3bd842-6cf7-4ad1-b79a-e149a9218114.png",
+    "dark": "https://media.brand.dev/d0696e6d-a70f-468f-afb4-51795bc9b2d8.png"
+  },
+  "favicon": "https://media.brand.dev/0f0072fc-41d3-4357-9a41-69ddc6516448.png",
+  "navbar": {
+    "primary": {
+      "type": "button",
+      "label": "Go to App",
+      "href": "https://comentify.io/"
+    }
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "connecting-accounts"
+            ]
+          },
+          {
+            "group": "Automation",
+            "pages": [
+              "automation/comment-replies",
+              "automation/dm-automation",
+              "automation/workflows"
+            ]
+          },
+          {
+            "group": "Inbox & Contacts",
+            "pages": [
+              "inbox/shared-inbox",
+              "inbox/contacts",
+              "inbox/lead-capture"
+            ]
+          },
+          {
+            "group": "AI Features",
+            "pages": [
+              "ai/overview",
+              "ai/ai-replies"
+            ]
+          },
+          {
+            "group": "Analytics & Team",
+            "pages": [
+              "analytics/overview",
+              "team/team-access"
+            ]
+          },
+          {
+            "group": "Account & Billing",
+            "pages": [
+              "account/plans",
+              "account/settings",
+              "account/faq"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "socials": {
+      "website": "https://comentify.io/"
+    }
+  }
+}

@@ -1,0 +1,88 @@
+---
+title: "Send Automatic DMs When Someone Comments"
+sidebarTitle: "DM Automation"
+description: "Automatically send Instagram or Facebook direct messages to users who comment on your posts, triggered by keywords or any comment activity."
+---
+
+Comment-to-DM automation turns every comment on your posts into a private conversation. When someone comments — or uses a specific keyword — Comentify automatically sends them a direct message, letting you deliver links, offers, or personalized follow-ups without any manual effort.
+
+## How It Works
+
+The flow is straightforward:
+
+1. A user leaves a comment on your Instagram or Facebook post.
+2. Comentify detects the comment and checks it against your active DM rules.
+3. If the comment matches a trigger (any comment, or a specific keyword), Comentify sends the user a DM on your behalf.
+4. The conversation appears in your [Shared Inbox](/inbox/shared-inbox) so your team can continue it if needed.
+
+This makes comment-to-DM automation ideal for lead capture, content delivery (sending a link to everyone who comments "link"), exclusive offers, and contest follow-ups.
+
+## Create a DM Automation Rule
+
+<Steps>
+  <Step title="Open DM Automation">
+    In the Comentify dashboard, go to **Automations** → **DM Automation** and click **New Rule**.
+  </Step>
+  <Step title="Select Target Post(s)">
+    Choose a specific post from your connected Instagram Professional account or Facebook Page, or enable **Apply to all posts** to trigger the DM on any post from that account.
+  </Step>
+  <Step title="Set the Trigger">
+    Under **Trigger**, choose one of the following:
+
+    - **Any comment** — Send a DM to everyone who comments, regardless of what they write.
+    - **Keyword match** — Send a DM only when the comment contains a specific word or phrase (for example, `"link"`, `"price"`, or `"info"`).
+
+    For keyword setup details, see the [Comment Replies keyword guide](/automation/comment-replies#keyword-triggers).
+  </Step>
+  <Step title="Compose the DM">
+    Write the direct message Comentify will send. Use personalization variables like `{first_name}` and `{comment_text}` to make each DM feel one-to-one. See [Message Personalization](#message-personalization) below.
+  </Step>
+  <Step title="Activate the Rule">
+    Toggle the rule to **Active** and click **Save Rule**. Comentify will start sending DMs as soon as a matching comment is detected.
+  </Step>
+</Steps>
+
+## Message Personalization
+
+Personalization variables make automated DMs feel hand-written. Comentify replaces each variable with real data before sending the message.
+
+| Variable | Replaced With |
+|---|---|
+| `{first_name}` | The commenter's first name |
+| `{comment_text}` | The exact text of the comment that triggered the rule |
+
+**Example DM:**
+```
+Hey {first_name}! Thanks for commenting "{comment_text}" 🎉
+Here's the link you asked for: https://example.com/offer
+```
+
+If a variable's value is unavailable, Comentify removes the placeholder cleanly so the message still reads naturally.
+
+<Warning>
+  Meta enforces a **24-hour messaging window** on both Instagram and Facebook. You can only send automated DMs to a user within 24 hours of their last interaction with your account. Sending messages outside this window is not permitted by the platform. Review [Meta's Messaging Policy](https://developers.facebook.com/docs/messenger-platform/policy/policy-overview/) before building time-sensitive campaigns that rely on DM delivery.
+</Warning>
+
+<Note>
+  Instagram requires that a user either **follows your account** or has **messaging permissions enabled** before you can send them a first-contact DM. If Comentify cannot deliver a DM due to these restrictions, the attempt is logged in the rule's run history so you can review it.
+</Note>
+
+## Combine DM Automation with Comment Replies
+
+DM automation and comment replies work best together. A common pattern is to post a short public reply that acknowledges the comment, then follow up with a detailed DM that delivers the real value — a link, a coupon code, or a personalized message.
+
+To set this up, create a [comment reply rule](/automation/comment-replies) alongside your DM rule and use the same keyword trigger on both. For example:
+
+- **Comment reply:** `"Great question, {first_name}! Check your DMs for the full details. 📩"`
+- **DM:** `"Hey {first_name}! Here's the exclusive link you asked for: https://example.com"`
+
+This approach keeps your post comments clean while delivering a richer experience in the inbox.
+
+<CardGroup cols={2}>
+  <Card title="Build Multi-Step Workflows" icon="diagram-project" href="/automation/workflows">
+    Chain DMs, replies, lead capture, and team assignments into a single automated flow.
+  </Card>
+  <Card title="Manage Conversations" icon="inbox" href="/inbox/shared-inbox">
+    View and reply to all DMs triggered by your automations from one shared team inbox.
+  </Card>
+</CardGroup>

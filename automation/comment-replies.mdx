@@ -1,0 +1,94 @@
+---
+title: "Automate Comment Replies on Instagram and Facebook"
+sidebarTitle: "Comment Replies"
+description: "Set up rules to automatically reply to comments on your Instagram posts and Facebook Pages using keywords, triggers, and custom messages."
+---
+
+Comentify's comment reply automation lets you respond to your audience instantly — without manually monitoring every post. By defining keyword triggers and pre-written messages, you can keep conversations moving, answer common questions, and boost engagement around the clock.
+
+## What Is Comment Reply Automation?
+
+Comment reply automation posts a public reply on your behalf whenever a comment matches a rule you define. Instead of watching for every "How much does this cost?" or "Where can I buy it?", you set the rule once and Comentify handles the rest.
+
+This is especially useful for:
+
+- **Product launches** — answer pricing and availability questions automatically
+- **Giveaways and contests** — confirm entries and share instructions instantly
+- **Always-on support** — respond to FAQs even outside business hours
+- **High-volume posts** — keep up with comment floods on viral or boosted content
+
+## Create a Comment Reply Rule
+
+<Steps>
+  <Step title="Open Comment Replies">
+    In the Comentify dashboard, navigate to **Automations** → **Comment Replies** and click **New Rule**.
+  </Step>
+  <Step title="Select the Target Post">
+    Choose which post the rule applies to. Select a specific post from your connected Instagram or Facebook account, or toggle **Apply to all posts** to cover every post on that account.
+  </Step>
+  <Step title="Set Keyword Triggers (Optional)">
+    Under **Trigger**, choose whether the rule fires on **Any comment** or only when a comment **contains specific keywords**. If you choose keywords, enter each one and configure the match type (see [Keyword Triggers](#keyword-triggers) below).
+
+    Leave this set to **Any comment** if you want to reply to every comment regardless of content.
+  </Step>
+  <Step title="Write the Reply Message">
+    In the **Reply** field, type the message Comentify will post publicly. You can use personalization variables such as `{first_name}` to address commenters by name. See [Reply Message Customization](#reply-message-customization) for all available variables.
+  </Step>
+  <Step title="Activate the Rule">
+    Toggle the rule to **Active** and click **Save Rule**. Comentify will begin monitoring for matching comments immediately.
+  </Step>
+</Steps>
+
+## Keyword Triggers
+
+Keyword triggers let you fire a reply only when a comment includes a specific word or phrase. This gives you precise control over which comments receive an automated response.
+
+### Match Types
+
+| Match Type | Behavior |
+|---|---|
+| **Contains** | Fires if the keyword appears anywhere in the comment. `"price"` matches `"what's the price?"` |
+| **Exact match** | Fires only if the entire comment equals the keyword. `"info"` matches `"info"` but not `"send info please"` |
+
+### Case Sensitivity
+
+All keyword matching is **case-insensitive** by default. The keyword `"Info"` will match `"info"`, `"INFO"`, and `"Info"` equally.
+
+### Multiple Keywords
+
+You can add multiple keywords to a single rule. The rule fires if **any one** of the keywords matches — you do not need a comment to contain all of them. To add another keyword, click **+ Add Keyword** in the trigger section.
+
+If you need different replies for different keywords, create separate rules for each keyword group.
+
+## Reply Message Customization
+
+Make your automated replies feel personal by using dynamic variables in your message text. Comentify replaces these placeholders with real values at the time the reply is posted.
+
+| Variable | Replaced With |
+|---|---|
+| `{first_name}` | The commenter's first name |
+
+**Example:**
+```
+Hey {first_name}, thanks for your comment! Check the link in our bio for full details. 🙌
+```
+
+If the commenter's name is unavailable (for example, on certain privacy settings), Comentify omits the variable gracefully rather than displaying the raw placeholder.
+
+<Tip>
+  Keep public replies short, warm, and action-oriented. A one- or two-sentence reply that directs the commenter to your bio link or invites them to check their DMs performs significantly better than a long block of text. Save the detail for a follow-up DM.
+</Tip>
+
+<Note>
+  Automated comment replies must comply with [Meta's Community Standards and Platform Policies](https://transparency.meta.com/policies/community-standards/). Avoid spammy, repetitive, or misleading replies — accounts that violate these guidelines may have automation features restricted. Review Meta's policies before launching high-volume rules.
+</Note>
+
+## Manage Your Rules
+
+All your comment reply rules live in **Automations** → **Comment Replies**. From the rules list you can:
+
+- **Enable / Disable** — Toggle the switch next to any rule to pause or resume it without deleting it.
+- **Edit** — Click the rule name to open the editor and update the target post, keywords, or message.
+- **Delete** — Open the rule and click **Delete Rule** at the bottom of the editor. Deleted rules cannot be recovered.
+
+Use the **Status** filter at the top of the list to view only active or inactive rules, and the **Search** bar to find rules by name when your list grows large.
