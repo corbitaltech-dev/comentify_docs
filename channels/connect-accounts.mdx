@@ -1,0 +1,272 @@
+---
+title: "Connect your Instagram and Facebook accounts"
+sidebarTitle: "Channels"
+icon: "plug"
+description: "Connect your Instagram account or Facebook Page to Comentify, choose how to connect, and reconnect it if needed."
+keywords: ["Comentify", "connect Instagram", "connect Facebook Page", "channels", "reconnect", "Instagram Business account"]
+---
+
+In Comentify, each connected account is called a **channel**.
+
+- A channel can be an Instagram account or a Facebook Page.
+- Comentify can reply to comments and messages only on connected channels.
+- You connect an account once, then Comentify can use it for your automations.
+
+{/* Screenshot: Channels page with one connected channel */}
+
+## Before you connect
+
+Check these settings before connecting your account. If something is missing, the connection may fail or stop working later.
+
+<AccordionGroup>
+  <Accordion title="1. Your Instagram account is a Business or Creator account" icon="camera">
+    - Personal Instagram accounts are not supported.
+    - In the Instagram app, go to **Settings** → **Account type** and choose **Business** or **Creator**.
+  </Accordion>
+  <Accordion title="2. Allow messages from connected tools" icon="message-square">
+    - Instagram must allow connected tools to send messages for you.
+    - In the Instagram app, go to **Settings** → **Messages and story replies** → **Messages requests** → **Connected tools**.
+    - Make sure this setting is turned on.
+  </Accordion>
+  <Accordion title="3. Your Instagram account is linked to a Facebook Page (Facebook only)" icon="link">
+    - This is required only when you choose **Connect with Facebook**.
+    - Link your Instagram account to your Facebook Page in Meta Business Suite.
+  </Accordion>
+  <Accordion title="4. You are a full admin of the Page (Facebook only)" icon="shield-check">
+    - This is required only when you choose **Connect with Facebook**.
+    - Editor or Moderator access is not enough. You must be a full admin.
+  </Accordion>
+  <Accordion title="5. Messaging is turned on for the Page (Facebook only)" icon="messages-square">
+    - This is required only when you choose **Connect with Facebook**.
+    - In Facebook, go to **Page Settings** → **Privacy** → **Messaging** and make sure it is turned on.
+  </Accordion>
+</AccordionGroup>
+
+## Connect with Instagram or Facebook?
+
+You can connect your accounts in two ways. The option you choose affects the features available later.
+
+- **Connect with Instagram:** Sign in with your Instagram account. You do not need a Facebook Page.
+- **Connect with Facebook:** Sign in with Facebook. You connect your Facebook Page and the Instagram account linked to it.
+
+| Feature | Instagram<br />(Connect with Instagram) | Instagram<br />(Connect with Facebook) | Facebook Page |
+|---|:---:|:---:|:---:|
+| Answer Facebook Messenger | <Icon icon="circle-x" color="#dc2626" /> | <Icon icon="circle-check" color="#16a34a" /> | <Icon icon="circle-check" color="#16a34a" /> |
+| Reply to a specific message in **Chat** | <Icon icon="circle-x" color="#dc2626" /> | <Icon icon="circle-check" color="#16a34a" /> | <Icon icon="circle-check" color="#16a34a" /> |
+| Ask people to follow before you send | <Icon icon="circle-check" color="#16a34a" /> | <Icon icon="circle-check" color="#16a34a" /> | <Icon icon="circle-x" color="#dc2626" /> |
+| Reply to @mentions in comments | <Icon icon="circle-check" color="#16a34a" /> | <Icon icon="circle-check" color="#16a34a" /> | <Icon icon="circle-x" color="#dc2626" /> |
+| Reply to story mentions and replies | <Icon icon="circle-check" color="#16a34a" /> | <Icon icon="circle-check" color="#16a34a" /> | <Icon icon="circle-x" color="#dc2626" /> |
+| Show follower count and verified badge | <Icon icon="circle-check" color="#16a34a" /> | <Icon icon="circle-check" color="#16a34a" /> | <Icon icon="circle-x" color="#dc2626" /> |
+| Show **Delivered** on messages | <Icon icon="circle-x" color="#dc2626" /> | <Icon icon="circle-x" color="#dc2626" /> | <Icon icon="circle-check" color="#16a34a" /> |
+
+<Note>
+  <Icon icon="circle-x" color="#dc2626" /> means Meta does not support this feature for that type of account, so Comentify cannot offer it. It is not a Comentify limit.
+</Note>
+
+<Tip>
+  **Have a Facebook Page linked to your Instagram account?** Choose **Connect with Facebook** to use more features.
+
+  **No Facebook Page?** Choose **Connect with Instagram** to connect your Instagram account directly.
+</Tip>
+
+## Connect your account
+
+<Steps>
+  <Step title="Open Channels" icon="mouse-pointer-click">
+    In the left menu, click **Channels**.
+  </Step>
+
+  <Step title="Click Connect Channel" icon="plus">
+    - Click **Connect Channel**.
+    - The **Before you connect** panel opens.
+    - Check that all the required items are ready.
+
+    {/* Screenshot: Before you connect panel with the checklist and both connect buttons */}
+  </Step>
+
+  <Step title="Choose how to connect" icon="split">
+    Click **Connect with Instagram** or **Connect with Facebook**.
+
+    Meta's sign-in window opens.
+  </Step>
+
+  <Step title="Sign in and allow access" icon="log-in">
+    **If you chose Connect with Instagram:**
+    - Sign in to your Instagram account.
+    - Allow all permissions requested by Meta.
+
+    **If you chose Connect with Facebook:**
+    - Sign in to your Facebook account.
+    - Select the Pages and Instagram accounts you want to connect.
+    - Allow all permissions requested by Meta.
+
+    <Warning>
+      If you turn off a permission, some features may not work. Comentify will show the channel as **Needs attention**. Allow all permissions to avoid this.
+    </Warning>
+
+    {/* Screenshot: Meta sign-in window asking for permissions */}
+  </Step>
+
+  <Step title="Check your new channel" icon="circle-check">
+    - Meta sends you back to Comentify.
+    - You see **Channel connected**. If you connected more than one account, you see the number of channels connected.
+    - Your new channel appears in the list with the status **Active**.
+  </Step>
+</Steps>
+
+<Check>
+  Your account is connected and its channel now shows as **Active** in **Channels**.
+</Check>
+
+<Note>
+  **Connect with Facebook** can add several channels at once. Each Facebook Page becomes one channel, and each Instagram account linked to a Page becomes another channel. Each channel counts toward your plan's channel limit, so connect only the accounts you need.
+</Note>
+
+## If the connection fails
+
+You see **Connection failed** with one of these messages.
+
+| Message | What it means | What to do |
+|---|---|---|
+| **Connection cancelled — no channel was added.** | You closed Meta's window or clicked cancel. | Click **Connect Channel** and try again. |
+| **No Facebook Pages were shared with the app.** | You did not select a Page in Meta's window. | Try again and select at least one Page where you are a full admin. |
+| **No Instagram account was returned.** | Your Instagram account is not a Business or Creator account. | Change your account type in the Instagram app, then try again. |
+| **Meta rejected the connection.** | Meta did not allow the connection. | Check the [Before you connect](#before-you-connect) list and try again. |
+| **Your current plan channel limit has been reached.** | You already reached your plan's channel limit. | Delete a channel you do not use or upgrade your plan. |
+
+## Channel status
+
+Each channel has a status that shows whether it is working.
+
+| Status | What it means | What to do |
+|---|---|---|
+| **Active** | Everything is working and automations are running. | Nothing. |
+| **Needs attention** | Something on Meta needs to be fixed. For example, messaging is turned off. | Click **View** and check the message in **Health**. |
+| **Automations paused** | The connection stopped working, so Comentify paused the automations. | Reconnect the channel. |
+| **Disconnected** | You disconnected the channel. It shows **Not in use**. | Reconnect it if you want to use it again. |
+
+When a channel needs attention, you also see a red **Attention** badge. A message appears at the top of the page with a **Review channels** button.
+
+## Reconnect a channel
+
+A connection may stop working if, for example, you remove Comentify's access in Meta.
+
+1. Go to **Channels**.
+2. Click the menu (⋮) next to the channel.
+3. Click **Reconnect**.
+4. Sign in to Meta again and allow all permissions.
+
+Your automations, chats, and history stay safe. After reconnecting, Comentify starts the automations again.
+
+<Tip>
+  Comentify usually renews your connection before it expires. You only need to reconnect if Comentify emails you or shows a warning.
+</Tip>
+
+### Emails you may get
+
+| Email subject | What it means | What to do |
+|---|---|---|
+| **Action may be needed: (channel name)** | Your connection will expire soon. Comentify usually renews it automatically. | Nothing, unless you receive the next email. |
+| **Automations paused for (channel name)** | The connection stopped working and automations are paused. | Click **Reconnect the channel** in the email. |
+
+### Messaging is switched off on Meta
+
+Sometimes the channel's **Health** shows **Messaging is switched off for this channel in Meta's settings**.
+
+- Reconnecting will not fix this.
+- Turn messaging back on in your Facebook Page settings or Instagram's **Connected tools** setting.
+- Comentify can send messages again after messaging is turned on.
+
+## See channel details
+
+1. Go to **Channels**.
+2. Click the menu (⋮) next to the channel.
+3. Click **View**.
+
+You can see:
+
+- **Account Info:** Account name, username, and connection method.
+- **Token Information:** Connection status and token expiry.
+- **Health:** Follower count, last account check, and any problems that need your attention.
+
+{/* Screenshot: Channel details page with Account Info and Health cards */}
+
+The same menu (⋮) also includes:
+
+- **Contact Defaults:** Choose the default details for new contacts from this channel. Learn more in [Contacts](/inbox/contacts).
+- **Ice Breakers:** Add questions that people can tap to start a chat with you.
+
+## Disconnect or delete a channel
+
+<CardGroup cols={2}>
+  <Card title="Disconnect" icon="unplug">
+    - Comentify stops sending from this channel.
+    - Your automations are paused, not deleted.
+    - Your chats and history are kept.
+    - You can reconnect the channel later.
+  </Card>
+  <Card title="Delete Channel" icon="trash-2">
+    - Comentify permanently deletes the channel.
+    - Its automations, flows, chats, messages, and activity log are deleted.
+    - Your contacts are kept.
+    - You cannot undo this.
+  </Card>
+</CardGroup>
+
+**To disconnect:**
+1. Click the menu (⋮) next to the channel.
+2. Click **Disconnect**, then click **Disconnect** again to confirm.
+
+**To delete:**
+1. Click the menu (⋮) next to the channel.
+2. Click **Delete Channel**.
+3. Type the channel name to confirm.
+4. Click **Delete Channel**.
+
+<Warning>
+  Not sure? Choose **Disconnect**. You can delete the channel later, but a deleted channel cannot be restored.
+</Warning>
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="How many channels can I connect?">
+    - It depends on your plan.
+    - Disconnected channels still count toward your limit.
+    - Delete a channel you no longer need to free up space.
+
+    See [Plans](/account/plans) for details.
+  </Accordion>
+  <Accordion title="Why can I not see the Connect Channel button?">
+    - You may have reached your plan's channel limit.
+    - Your role may not allow you to connect channels. Ask your workspace owner.
+  </Accordion>
+  <Accordion title="Do I give Comentify my password?">
+    - No. You sign in through Meta's own window.
+    - Comentify never sees your Instagram or Facebook password.
+  </Accordion>
+  <Accordion title="Can I switch from Connect with Instagram to Connect with Facebook later?">
+    - Yes. First, link your Instagram account to a Facebook Page.
+    - Then click **Connect Channel** and choose **Connect with Facebook**.
+  </Accordion>
+  <Accordion title="Why did my automations stop?">
+    - Check the channel status in **Channels**.
+    - If it says **Automations paused**, reconnect the channel.
+    - If it says **Needs attention**, click **View** and check the message in **Health**.
+  </Accordion>
+  <Accordion title="If I delete a channel, do I lose my contacts?">
+    - No. Your contacts stay in **Contacts**.
+    - Everything else from that channel is deleted.
+  </Accordion>
+</AccordionGroup>
+
+## Where to next
+
+<CardGroup cols={2}>
+  <Card title="Turn on your first automation" icon="rocket" href="/quickstart">
+    Send an automatic DM when someone comments a keyword.
+  </Card>
+  <Card title="See your contacts" icon="contact" href="/inbox/contacts">
+    See people who comment on your posts or message you.
+  </Card>
+</CardGroup>

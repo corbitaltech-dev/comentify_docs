@@ -31,8 +31,13 @@
               "quickstart",
               "create-workspace",
               "choose-plan",
-              "dashboard",
-              "connecting-accounts"
+              "dashboard"
+            ]
+          },
+          {
+            "group": "Channels",
+            "pages": [
+              "channels/connect-accounts"
             ]
           },
           {
@@ -94,6 +99,9 @@
       "vscode"
     ]
   },
+  "redirects": [
+    { "source": "/connecting-accounts", "destination": "/channels/connect-accounts" }
+  ],
   "icons": {
     "library": "lucide"
   },
