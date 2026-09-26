@@ -1,0 +1,8 @@
+# Mintlify automatically ignores .git, .claude, node_modules, README.md, LICENSE.md, etc.
+
+# Agent instructions — not a docs page
+AGENTS.md
+
+# Draft content
+drafts/
+*.draft.mdx
