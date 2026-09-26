@@ -1,0 +1,126 @@
+---
+title: "Pay for your plan"
+sidebarTitle: "Pay for your plan"
+icon: "credit-card"
+description: "Pay for your Comentify plan by card, UPI, PayPal, or bank transfer and activate your workspace."
+keywords: ["Comentify", "payment", "choose plan", "pay for plan", "bank transfer", "Razorpay", "Stripe", "PayPal"]
+---
+
+Your workspace becomes available after your plan is active.
+
+- If you choose a free plan, your workspace opens right away. You can skip this page. 
+- If you choose a paid plan, you see the **Complete Payment** page when you sign in. 
+- You pay once on this page, and then your dashboard opens.
+
+## Steps
+
+The payment page has four steps: **Plan**, **Method**, **Payment**, and **Review**.
+
+<Steps>
+  <Step title="Choose a payment method" icon="wallet">
+    1. Under **Payment Method**, choose how you want to pay.
+    2. Click **Continue**.
+
+    {/* Screenshot: Payment page, Payment Method step */}
+  </Step>
+
+  <Step title="Apply a coupon (optional)" icon="ticket">
+    1. Enter your code in **Coupon Code**.
+    2. Click **Apply**.
+
+    If the coupon is valid, you will see the discount in the price summary.
+
+    - **Base amount:** Plan price.
+    - **Tax:**  if applicable.
+    - **Total payable:** Amount you need to pay.
+  </Step>
+
+  <Step title="Complete the payment" icon="credit-card">
+    The payment steps depend on your selected method.
+
+    **Razorpay**
+    - Click **Pay with Razorpay**.
+    - Pay using card, UPI, netbanking, or wallet.
+    - Your plan becomes active after payment.
+
+    **Stripe**
+    - Click **Pay with Stripe**.
+    - Complete the payment on Stripe's payment page.
+    - You will return to Comentify after payment.
+
+    **PayPal**
+    - Click the PayPal button.
+    - Sign in to PayPal or pay by card.
+    - Your plan becomes active after payment.
+
+    **Offline Payment (bank transfer)**
+    1. Check **Bank Details**.
+    2. Transfer the **Total payable** amount.
+    3. Enter the bank transaction number in **Transaction ID**.
+    4. Upload your payment proof in **Payment screenshot**. This is optional.
+    5. Click **Submit for approval**.
+
+    {/* Screenshot: Payment page, Offline Payment Details with Bank Details open */}
+  </Step>
+
+  <Step title="Wait for bank transfer approval" icon="hourglass">
+    This step applies only to **Offline Payment**.
+
+    - Your payment shows as **Payment waiting for approval**.
+    - Our team checks your payment.
+    - You receive an email after it is approved.
+    - Your workspace opens after approval.
+
+    You can close the page while waiting. Your payment details are saved.
+
+    Payments through **Razorpay, Stripe, or PayPal** do not need manual approval.
+
+    {/* Screenshot: Payment page, Payment waiting for approval */}
+  </Step>
+</Steps>
+
+<Check>
+  Your payment is complete and your workspace is active.
+</Check>
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="My bank transfer was rejected. What should I do?">
+    - The page shows **Payment needs resubmission** and the reason for rejection.
+    - Correct the payment details and click **Resubmit payment**.
+  </Accordion>
+
+  <Accordion title="Money was deducted, but my plan is not active.">
+    - For Stripe, wait a moment and refresh the page.
+    - If you see **Payment verification failed**, contact support with the payment date and amount.
+  </Accordion>
+
+  <Accordion title="Does my plan renew automatically?">
+    - No. Comentify does not charge you automatically.
+    - We send reminders 7 days, 3 days, and 1 day before your plan ends.
+    - When your plan ends, you can renew it from **Renew Your Subscription**.
+  </Accordion>
+
+  <Accordion title="Can I upgrade my plan later?">
+    - Yes. You can upgrade from your settings.
+    - Any remaining amount from your current plan is shown as **Plan credit**.
+  </Accordion>
+
+  <Accordion title="Can I pay later?">
+    - Yes. Click **Log out** on the payment page.
+    - Sign in again when you are ready to pay.
+    - You cannot use your workspace until the plan is active.
+  </Accordion>
+</AccordionGroup>
+
+## Where to next
+
+<CardGroup cols={2}>
+  <Card title="Quick start" icon="rocket" href="/quickstart">
+    Connect your account and set up your first automation.
+  </Card>
+  <Card title="Plans" icon="layers" href="/account/plans">
+    See what each plan includes.
+  </Card>
+</CardGroup>
