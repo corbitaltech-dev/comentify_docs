@@ -1,111 +1,307 @@
 ---
-title: "Manage Instagram and Facebook Conversations as a Team"
-sidebarTitle: "Shared Inbox"
-icon: "inbox"
-description: "Comentify's shared inbox lets your entire team view, reply to, and manage Instagram and Facebook conversations from one collaborative workspace."
+title: "Chat"
+sidebarTitle: "Chat"
+icon: "messages-square"
+description: "Read and reply to Instagram and Facebook messages in one place, assign chats to your team, and handle messages that need a reply."
+keywords: ["Comentify", "chat", "shared inbox", "Instagram DMs", "Facebook Messenger", "team inbox"]
 ---
 
-Comentify's shared inbox brings every Instagram DM and Facebook Page message into a single, collaborative workspace so your team can respond faster, stay coordinated, and never let a conversation slip through the cracks.
+**Chat** is where you read and reply to your messages.
 
-## What Is the Shared Inbox?
+- Instagram and Facebook messages appear in one place.
+- You and your team can reply from the same screen.
+- See which chats need a reply.
 
-The shared inbox is a central hub where every team member can see, reply to, and manage incoming social conversations in real time. Instead of logging into separate Instagram or Facebook accounts, your whole team works from one unified view — making it ideal for customer support teams, community managers, and social media teams handling high message volumes.
+When you reply yourself, automation pauses replies in that chat. This prevents both you and automation from replying at the same time.
 
-<Note>
-  The shared inbox supports both Instagram Direct Messages and Facebook Page messages. All conversations from connected accounts appear in a single, unified list.
-</Note>
+{/* Screenshot: Chat page with the conversation list, an open chat and the contact panel */}
 
-## Inbox Overview
+## What you get
 
-The inbox is divided into three main areas:
-
-<CardGroup cols={3}>
-  <Card title="Conversation List" icon="list" href="/inbox/shared-inbox#conversation-list">
-    Browse all incoming messages, filtered by status, assignee, or platform.
+<CardGroup cols={2}>
+  <Card title="All messages in one place" icon="inbox">
+    See Instagram DMs and Facebook Messenger messages in one list.
   </Card>
-  <Card title="Conversation View" icon="message-square" href="/inbox/shared-inbox#conversation-view">
-    Read the full message thread with a contact, including their profile details.
+  <Card title="See who needs a reply" icon="user-round">
+    The **Needs you** tab shows chats waiting for a team member.
   </Card>
-  <Card title="Reply Composer" icon="square-pen" href="/inbox/shared-inbox#sending-replies">
-    Type a response, insert saved replies, and send directly from the inbox.
+  <Card title="Work as a team" icon="users">
+    Assign chats to team members and add private notes.
+  </Card>
+  <Card title="Reply faster" icon="zap">
+    Type `/` for saved replies and `@` for contact details.
   </Card>
 </CardGroup>
 
-### Conversation List
+## Before you start
 
-The left panel displays all conversations sorted by most recent activity. Each row shows the contact's name, profile picture, a message preview, and the conversation's current status. Use the top navigation tabs to switch between **All**, **Open**, **Pending**, and **Resolved** conversations.
+<AccordionGroup>
+  <Accordion title="A connected channel" icon="plug">
+    - Messages only come from connected channels.
 
-### Conversation View
+    Learn more: [Connect your accounts](/channels/connect-accounts)
+  </Accordion>
+  <Accordion title="The 24-hour rule" icon="clock">
+    - You can reply within 24 hours of the person's last message.
+    - This is a Meta rule, not a Comentify rule.
+    - See [The 24-hour reply window](#the-24-hour-reply-window) below.
+  </Accordion>
+</AccordionGroup>
 
-Selecting a conversation opens the full message thread in the center panel. You can read the entire history of the exchange, see the contact's platform and username, and review any tags or notes attached to their contact record.
+## The Chat screen
 
-## Sending Replies
+The Chat screen has three parts.
 
-### Typing a Reply
+| Part | What you see |
+|---|---|
+| **Left:** the chat list | All conversations, with the newest message first. |
+| **Middle:** the open chat | Messages and the reply box. |
+| **Right:** contact details | Contact information and private team notes. Click **Open contact details** to show it. |
 
-Click the reply composer at the bottom of the conversation view, type your message, and press **Send** or hit `Enter` to deliver it. Your reply is sent instantly through the connected Instagram or Facebook account.
+### Tabs in the chat list
 
-### Using Saved Responses
+| Tab | What it shows |
+|---|---|
+| **All** | All conversations. |
+| **Unread** | Conversations with unread messages. |
+| **Mine** | Conversations assigned to you. |
+| **Unassigned** | Conversations not assigned to any team member. |
+| **Needs you** | People waiting for a reply. |
 
-Speed up common replies with saved responses (also called quick replies). To insert one:
+### Signs in the chat list
+
+- A red **Needs you** badge means the person is waiting for a reply.
+- A lock icon means the 24-hour reply window is closed.
+- **Paused** means automatic replies are paused in the chat.
+- A number shows unread messages.
+
+### Find a chat
+
+- Enter a name or username in **Search people**.
+- Click **Filter conversations** to filter by status, team member, type, or source.
+
+## Reply to a message
 
 <Steps>
-  <Step title="Open the composer">
-    Click inside the reply text field in an open conversation.
+  <Step title="Open the chat" icon="mouse-pointer-click">
+    Click a conversation in the list.
   </Step>
-  <Step title="Open saved responses">
-    Click the **Saved Responses** icon (lightning bolt) in the composer toolbar.
+
+  <Step title="Type your reply" icon="square-pen">
+    - Type your message in the box.
+    - Type `/` to use a saved reply.
+    - Type `@` to add details such as the person's name, for example `{{first_name}}`.
+    - Click **Emoji** to add an emoji.
   </Step>
-  <Step title="Select a response">
-    Browse or search your saved responses and click one to insert it into the composer.
+
+  <Step title="Add a photo, video or audio (optional)" icon="paperclip">
+    - Click **Attach media**.
+    - Choose **Photo**, **Video**, or **Audio**.
+    - Select the file from your computer.
   </Step>
-  <Step title="Edit and send">
-    Personalize the text if needed, then press **Send**.
+
+  <Step title="Send" icon="send">
+    Click **Send message**.
+
+    Comentify pauses automatic replies in this chat after you send a message.
   </Step>
 </Steps>
 
-## Assigning Conversations
+<Check>
+  Your message is sent and automatic replies are paused in this chat.
+</Check>
 
-Assign any conversation to a specific team member to make ownership clear and prevent duplicate replies.
+### Reply to one specific message
+
+You can reply directly to a specific message.
+
+1. Click (⋮) on the message.
+2. Click **Reply**.
+3. Type your answer and send it.
+
+<Note>
+  This works only for channels connected with **Connect with Facebook**. Meta does not allow it for **Connect with Instagram**. Learn more in [Connect your accounts](/channels/connect-accounts#connect-with-instagram-or-facebook).
+</Note>
+
+## When a person needs you
+
+Comentify marks a chat as **Needs you** when:
+
+- The person sent a message and no automation or flow replied.
+- The person messaged while a team member was handling the chat.
+
+The chat shows **Needs you · waiting for a reply from your team**.
+
+To clear it:
+
+- Reply to the person, or
+- Click **Mark as handled** if no reply is needed.
 
 <Tip>
-  Always assign conversations before replying. This prevents two team members from sending separate responses to the same message at the same time.
+  Check the **Needs you** tab regularly. The Dashboard also shows when chats are waiting for your team.
 </Tip>
 
-To assign a conversation:
+## Why automatic replies pause when you reply
 
-1. Open the conversation in the inbox.
-2. Click the **Assign** button in the top-right panel.
-3. Select a team member from the dropdown list.
-4. The conversation now appears in that team member's **Assigned to Me** view.
+When a team member sends a message, automations pauses replies in that chat for 24 hours. This prevents automations from replying at the same time.
 
-You can reassign a conversation at any time by repeating these steps. To learn how to add more team members to your workspace, see [Team Access](/team/team-access).
+At the top of the chat, you see **Automation paused · a team member replied · resumes in** with the remaining time.
 
-## Conversation Statuses
+- **What pauses:** Automatic DM replies and flows in this chat.
+- **What keeps working:** Comment automations can still reply when the person comments on a post.
+- **To start again early:** Click **Resume**.
 
-Every conversation has one of three statuses that reflect where it is in your workflow:
+## The 24-hour reply window
 
-<Accordion title="Open">
-  The conversation is active and requires attention. New incoming messages automatically set a conversation to **Open**.
-</Accordion>
+Meta allows businesses to reply within 24 hours of a person's last message.
 
-<Accordion title="Pending">
-  You have replied and are waiting for a response from the contact. Mark a conversation as **Pending** to signal that no immediate action is needed from your team.
-</Accordion>
+- Each new message starts a new 24-hour window.
+- The chat shows the remaining time or **Window open**.
+- When the time ends, you see **Window expired**.
+- You cannot reply until the person messages again.
 
-<Accordion title="Resolved">
-  The conversation is complete. Mark a conversation as **Resolved** to remove it from the active queue. Resolved conversations remain searchable in your history.
-</Accordion>
+<Note>
+  This is a Meta rule, not a Comentify rule.
+</Note>
 
-To change a conversation's status, click the status badge in the top-right corner of the conversation view and select the new status from the dropdown.
+## Give a chat to a team member
 
-## Filtering and Searching Conversations
+1. Open the chat.
+2. Click the assign button at the top. It shows **Unassigned** or a team member's name.
+3. In **Assign conversation**, select one or more team members.
+4. Click **Apply**.
 
-Use the search bar at the top of the conversation list to find a specific message or contact by keyword, username, or phrase. To narrow results further, apply filters:
+The first selected person becomes the main owner of the chat. The chat appears in their **Mine** tab.
 
-- **Status** — show only Open, Pending, or Resolved conversations
-- **Assignee** — show conversations assigned to a specific team member or unassigned
-- **Platform** — show only Instagram or only Facebook messages
-- **Tag** — show contacts with a specific tag applied to their record
+To assign new chats automatically, set **Assign To** in **Contact Defaults**. Learn more in [Contacts](/inbox/contacts#before-you-start).
 
-Combine multiple filters to build a precise view of your queue.
+## Contact details
+
+Click **Open contact details** at the top of a chat. A panel opens on the right with two tabs: **Details** and **Notes**.
+
+At the top, you see the person's name, username and type, like **Guest**, **Lead** or **Customer**.
+
+{/* Screenshot: Contact details panel with the Details tab open */}
+
+The **Details** tab has three parts.
+
+### Contact information
+
+| Field | What it shows |
+|---|---|
+| **Email** | The person's email, if they shared it. Otherwise it says **Not provided**. |
+| **Phone** | The person's phone number, if you have it. Otherwise it says **Not provided**. |
+| **Channel** | Where they contact to you: **Instagram** or **Facebook**. |
+
+### Relationship
+
+| Field | What it shows |
+|---|---|
+| **Lifecycle** | How recently the person was active. **Active** means the last 30 days. **Cooling** means 30 to 90 days ago. **Dormant** means over 90 days ago. |
+| **Status** | Where the person is with you. It says **Not set** until you choose one. |
+| **Source** | Where the person came from. It says **Not set** until you choose one. |
+| **Audience** | **Follower** if they follow your Instagram account, or **Not a follower** if they do not. Instagram only. |
+| **Profile** | **Verified** if their Instagram account has a blue badge, or **Not verified** if it does not. Instagram only. |
+
+### Activity
+
+| Field | What it shows |
+|---|---|
+| **Messages** | How many messages the person sent you. |
+| **Comments** | How many comments the person left on your posts. |
+| **First seen** | When the person contact you first time. |
+| **Last activity** | When the person send last message or commented. |
+
+<Tip>
+  To change the email, phone, status or source, edit the person in **Contacts**. Learn more in [Contacts](/inbox/contacts#add-or-edit-a-contact).
+</Tip>
+
+## Private notes
+
+Private notes help your team share information about a person. The person cannot see them.
+
+1. Click **Open contact details**.
+2. Open the **Notes** tab.
+3. Enter your note in **Write an internal note...** and click **Add note**.
+
+Notes are saved with the contact and also appear in **Contacts**.
+
+## Search inside a chat
+
+- Click **Search messages** at the top of the chat.
+- Enter a word or phrase.
+- Press Enter for older matches and Shift+Enter for newer matches.
+
+## Clear or delete a chat
+
+Click **Conversation actions** at the top of the chat.
+
+| Option | What happens |
+|---|---|
+| **Clear chat** | Removes messages and notes. The contact and conversation stay, so new messages can still arrive. |
+| **Delete chat** | Permanently removes the conversation, messages, and notes. |
+
+You cannot undo either action.
+
+## Saved replies
+
+Saved replies, called **canned replies** in the app, are messages you can reuse.
+
+- Type `/` in the reply box to find a saved reply.
+- Keep typing to search, then select one.
+- A saved reply can include text, a photo, video, or audio.
+
+Create saved replies in **Setup** → **Canned Replies**.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Why can I not type a reply?">
+    - The 24-hour window may be closed. Wait for the person to message again.
+    - The channel may have a problem. Check its status in **Channels**.
+    - Your role may not allow you to reply. Ask your workspace owner.
+  </Accordion>
+
+  <Accordion title="Why do I not see Reply on a message?">
+    - The channel was connected with **Connect with Instagram**.
+    - Meta allows replies to specific messages only for **Connect with Facebook**.
+  </Accordion>
+
+  <Accordion title="Why can my team member see only some chats?">
+    - Their role may limit which chats they can see.
+    - Change their access in **Setup** → **Roles**.
+  </Accordion>
+
+  <Accordion title="Do my replies from Chat use credits?">
+    - Yes. Messages sent by Comentify to Meta use credits.
+    - See [Plans](/account/plans) for details.
+  </Accordion>
+
+  <Accordion title="How long does Comentify keep my messages?">
+    - It depends on your plan.
+    - Older messages are removed after the number of days allowed by your plan.
+  </Accordion>
+
+  <Accordion title="What happens when I reach my conversation limit?">
+    - Your plan has a limit on new conversations.
+    - When you reach the limit, Comentify cannot start new conversations with new people.
+    - Existing conversations continue to work.
+    - Upgrade your plan to start new conversations.
+  </Accordion>
+
+  <Accordion title="Can I answer Instagram comments from Chat?">
+    - No. **Chat** is for direct messages.
+    - Use automations to reply to comments.
+  </Accordion>
+</AccordionGroup>
+
+## Where to next
+
+<CardGroup cols={2}>
+  <Card title="See your contacts" icon="contact" href="/inbox/contacts">
+    See people who comment on your posts or message you.
+  </Card>
+  <Card title="Turn on your first automation" icon="rocket" href="/quickstart">
+    Let Comentify reply to comments and messages automatically.
+  </Card>
+</CardGroup>

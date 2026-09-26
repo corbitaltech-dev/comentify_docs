@@ -42,19 +42,18 @@
             ]
           },
           {
+            "group": "Contacts & Inbox",
+            "pages": [
+              "inbox/contacts",
+              "inbox/shared-inbox"
+            ]
+          },
+          {
             "group": "Automation",
             "pages": [
               "automation/comment-replies",
               "automation/dm-automation",
               "automation/workflows"
-            ]
-          },
-          {
-            "group": "Inbox & Contacts",
-            "pages": [
-              "inbox/shared-inbox",
-              "inbox/contacts",
-              "inbox/lead-capture"
             ]
           },
           {
@@ -101,7 +100,8 @@
     ]
   },
   "redirects": [
-    { "source": "/connecting-accounts", "destination": "/channels/connect-accounts" }
+    { "source": "/connecting-accounts", "destination": "/channels/connect-accounts" },
+    { "source": "/inbox/lead-capture", "destination": "/inbox/contacts" }
   ],
   "icons": {
     "library": "lucide"
