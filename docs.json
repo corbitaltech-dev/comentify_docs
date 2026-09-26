@@ -37,7 +37,8 @@
           {
             "group": "Channels",
             "pages": [
-              "channels/connect-accounts"
+              "channels/connect-accounts",
+              "channels/ice-breakers"
             ]
           },
           {
