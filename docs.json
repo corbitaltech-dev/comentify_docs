@@ -1,11 +1,11 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "name": "Comentify",
-  "theme": "almond",
+  "theme": "maple",
   "colors": {
     "primary": "#5048e5",
-    "light": "#120b43",
-    "dark": "#c4c4c4"
+    "light": "#A5A1F5",
+    "dark": "#3730A3"
   },
   "logo": {
     "light": "https://media.brand.dev/ca3bd842-6cf7-4ad1-b79a-e149a9218114.png",
@@ -78,5 +78,23 @@
     "socials": {
       "website": "https://comentify.io/"
     }
+  },
+  "contextual": {
+    "options": [
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
+  },
+  "icons": {
+    "library": "lucide"
+  },
+  "fonts": {
+    "family": "Geist"
   }
 }
