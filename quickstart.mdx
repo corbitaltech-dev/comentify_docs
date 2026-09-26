@@ -1,71 +1,178 @@
 ---
-title: "Quickstart: Go Live with Comentify in Under 10 Minutes"
-sidebarTitle: "Quickstart"
+title: "Quick start"
+sidebarTitle: "Quick start"
 icon: "rocket"
-description: "Learn how to connect your Instagram or Facebook account and create your first comment automation with Comentify in under 10 minutes."
+description: "Create your workspace, connect Instagram, and set up automatic replies when someone uses a trigger keyword in a comment or DM."
+keywords: ["Comentify", "quick start", "Instagram comment to DM", "first automation", "Instagram DM automation"]
 ---
 
-Comentify turns your Instagram and Facebook engagement into an automated, scalable workflow — from replying to comments and sending DMs to capturing leads and tracking performance. This guide walks you through everything you need to go from a brand-new account to your first live automation in under ten minutes.
+This guide takes you from a new account to your first live automation.
 
-<Note>
-  Comentify requires an **Instagram Professional account** (Business or Creator) or a **Facebook Page**. Personal Instagram or Facebook profiles are not supported. If you haven't already, [convert your Instagram profile to a Professional account](https://help.instagram.com/502981923235522) before continuing.
-</Note>
+- Someone comments a word like **price** on your post.
+- Comentify sends them a **direct message (DM)** with your reply.
+- You do not have to reply by hand.
+
+An **automation** is a rule you set once. After that, Comentify follows the rule for you.
+
+## What you get
+
+<CardGroup cols={2}>
+  <Card title="Every comment gets an answer" icon="message-circle">
+    People get your reply even when you are busy or asleep.
+  </Card>
+  <Card title="Replies land in their DMs" icon="send">
+    Your message goes straight to the person's inbox, where they will see it.
+  </Card>
+  <Card title="You choose the words" icon="square-pen">
+    You decide which keyword starts the reply and what the reply says.
+  </Card>
+  <Card title="Each person becomes a contact" icon="contact">
+    Comentify saves every person who comments, so you can follow up later.
+  </Card>
+</CardGroup>
+
+## Before you start
+
+<AccordionGroup>
+  <Accordion title="An Instagram Business or Creator account" icon="camera">
+    - Comentify does not work with a personal Instagram account.
+    - A Business or Creator account is free.
+    - To switch, open the Instagram app and go to **Settings** → **Account type**.
+  </Accordion>
+  <Accordion title="Messages from connected tools are allowed" icon="message-square">
+    - Instagram must allow outside tools to send messages for you.
+    - In the Instagram app, go to **Settings** → **Messages and story replies** → **Connected tools**.
+    - Make sure this setting is turned on.
+  </Accordion>
+  <Accordion title="No other automation tool is connected" icon="unplug">
+    - Two tools can reply to the same comment and confuse your followers.
+    - Disconnect any other comment or DM tool before you connect Comentify.
+  </Accordion>
+  <Accordion title="A Facebook Page (only if you connect with Facebook)" icon="facebook">
+    You need these only if you choose **Connect with Facebook** in step 3:
+    - Your Instagram account is linked to a Facebook Page.
+    - You are a full admin of that Page. Editor or Moderator access is not enough.
+    - Messaging is turned on for the Page.
+  </Accordion>
+  <Accordion title="A second Instagram account for testing" icon="users">
+    - Comentify does not reply to comments from your own account.
+    - To test your automation, you need a friend's account or a second account of your own.
+  </Accordion>
+</AccordionGroup>
+
+## Steps
 
 <Steps>
-  <Step title="Create your Comentify account">
-    Head to [comentify.io](https://comentify.io) and sign up for a free account. Enter your email address, choose a password, and verify your email when the confirmation message arrives. Once verified, you'll land on your Comentify dashboard and be ready to connect a social account.
+  <Step title="Create your workspace" icon="user-plus">
+    Your **workspace** is your own space in Comentify. Your accounts, contacts and automations all live there.
+
+    1. Go to [comentify.io](https://comentify.io) and click **Get started**.
+    2. Fill in the three tabs: **Personal Information**, **Company Information** and **Security**.
+    3. On the **Personal Information** tab, choose your plan.
+    4. Click **Create Account**.
+    5. Sign in with your email and password.
+
+    Comentify asks you to verify your email, open the email we sent and click the link.
   </Step>
 
-  <Step title="Connect your Instagram or Facebook account">
-    From the dashboard, navigate to **Settings → Connected Accounts** and click **Connect Instagram** or **Connect Facebook Page**. You'll be redirected to Meta's secure OAuth authorization screen — log in with the Facebook account that owns your Page or is linked to your Instagram Professional profile, grant the requested permissions, and select the specific account or Page you want to manage. Comentify never stores your Meta credentials. See [Connect Accounts](/connecting-accounts) for a full walkthrough.
+  <Step title="Activate your plan" icon="credit-card">
+    - If you chose a free plan, you go straight to your dashboard.
+    - If you chose a paid plan, you see the **Complete Payment** page first.
+    - Choose a payment method, pay, and your dashboard opens.
+    - If you choose **Offline Payment**, enter your transaction details and click **Submit for approval**. Your workspace opens after our team checks the payment.
+
+    Details: [Plans](/account/plans)
   </Step>
 
-  <Step title="Create your first comment automation rule">
-    Go to **Automation → Comment Replies** in the left sidebar and click **New Rule**. Give your rule a name, then configure the three core elements:
+  <Step title="Connect your Instagram account" icon="plug">
+    In Comentify, each connected Instagram account or Facebook Page is called a **channel**.
 
-    - **Trigger** — choose a post or set a keyword filter (e.g., reply to any comment containing "price").
-    - **Reply** — write the public comment reply Comentify will post automatically. Use variables like `{{first_name}}` to personalize responses.
-    - **Action** (optional) — add a follow-up DM, tag a lead, or enroll the commenter in a workflow.
+    1. In the left menu, click **Channels**.
+    2. Click **Connect Channel**.
+    3. Read the **Before you connect** list and check each item.
+    4. Click **Connect with Instagram** or **Connect with Facebook**.
+    5. Sign in to Meta's own window and allow every permission it asks for.
 
-    Click **Save & Activate** when you're happy with the rule.
+    When you come back, you see the message **Channel connected.**
+
+    <Tip>
+      Not sure which button to pick? Choose **Connect with Instagram** if you only use Instagram. Choose **Connect with Facebook** if you also want to answer Facebook Messenger.
+    </Tip>
+
+    Details: [Connect your accounts](/connecting-accounts)
   </Step>
 
-  <Step title="Test your automation">
-    Open the post you selected in the previous step on Instagram or Facebook and leave a test comment that matches your trigger keyword. Within a few seconds, Comentify should post the reply you configured. Head back to **Automation → Comment Replies**, open your rule, and check the **Activity** tab to confirm the event was captured and the reply was sent successfully.
+  <Step title="Create your first automation" icon="zap">
+    1. In the left menu, click **Automations**.
+    2. Click **Add automation**.
+
+    **Trigger & matching**
+
+    - **Name:** give it a name you will remember, like "Price reply".
+    - **Channel:** choose the account you just connected.
+    - **Trigger:** choose **Comment → DM**.
+    - **Scope:** choose **All posts**, or choose **A specific post** and pick one post.
+    - **Match mode:** choose **Contains keyword**.
+    - **Keyword:** type a word, like `price`, and press Enter.
+    - Click **Continue**.
+
+    **Content**
+
+    - Write the message you want to send.
+    - Type `@` to add the person's name, like `{{first_name}}`.
+    - Click **Continue**.
+
+    **Review**
+
+    - Check the summary.
+    - Leave **Turn on now** switched on.
+    - Click **Save**.
+  </Step>
+
+  <Step title="Test it" icon="circle-check">
+    1. Use your second Instagram account.
+    2. Comment your keyword on the post you chose.
+    3. Open the DMs of that second account.
+
+    You should see your message there.
   </Step>
 </Steps>
 
-## What's next?
+<Check>
+  You created a workspace, connected Instagram, and turned on an automation that answers comments with a DM.
+</Check>
 
-Now that your first automation is live, explore the rest of Comentify's feature set to build richer engagement experiences.
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Will the person also get a public reply under their comment?">
+    - No. A **Comment → DM** automation only sends a DM.
+    - To post a public reply as well, create a second automation and choose **Comment auto-reply** as the trigger.
+  </Accordion>
+  <Accordion title="Why did I not get a DM when I commented on my own post?">
+    - Comentify does not reply to comments from your own account.
+    - Test with a different Instagram account.
+  </Accordion>
+  <Accordion title="Will the same person get the DM again if they comment again?">
+    - Instagram allows only one private reply to each comment.
+    - A new comment with the keyword gets a new DM.
+    - To answer only the first comment from each person, turn on **Only on first interaction** in the **Trigger & matching** step.
+  </Accordion>
+</AccordionGroup>
+
+## Where to next
 
 <CardGroup cols={2}>
-  <Card
-    title="Connect Accounts"
-    icon="plug"
-    href="/connecting-accounts"
-  >
-    Learn how to connect, manage, and reconnect your Instagram and Facebook accounts.
+  <Card title="Connect your accounts" icon="plug" href="/connecting-accounts">
+    Learn how to connect, check and fix your Instagram and Facebook accounts.
   </Card>
-  <Card
-    title="Comment Replies"
-    icon="message-circle"
-    href="/automation/comment-replies"
-  >
-    Build advanced comment-reply rules with keyword filters, variables, and branching logic.
+  <Card title="Reply to comments in public" icon="message-circle" href="/automation/comment-replies">
+    Post an automatic public reply under each comment.
   </Card>
-  <Card
-    title="DM Automation"
-    icon="send"
-    href="/automation/dm-automation"
-  >
-    Automatically send personalized direct messages triggered by comments, story replies, and more.
+  <Card title="Answer DMs automatically" icon="send" href="/automation/dm-automation">
+    Reply to direct messages, story replies and story mentions.
   </Card>
-  <Card
-    title="Workflows"
-    icon="workflow"
-    href="/automation/workflows"
-  >
-    Chain together comments, DMs, lead tags, and notifications into multi-step automated workflows.
+  <Card title="Plans" icon="credit-card" href="/account/plans">
+    See what each plan includes and how credits work.
   </Card>
 </CardGroup>
