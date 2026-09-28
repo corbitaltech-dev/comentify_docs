@@ -1,0 +1,148 @@
+---
+title: "Meta Activity Log"
+sidebarTitle: "Meta Activity Log"
+icon: "send"
+description: "See every message Comentify tried to send to Instagram and Facebook, whether it was sent, and why it failed."
+keywords: ["Comentify", "Meta activity log", "message log", "failed messages", "Instagram DM not sent"]
+---
+
+The **Meta Activity Log** shows every message Comentify tried to send to Instagram and Facebook.
+
+* Each row shows one message, such as an automatic DM or a reply from **Chat**.
+* It shows whether the message was sent or failed.
+* If it failed, you can see the reason from Meta.
+
+Use it when someone says, **"I did not get your message."**
+
+<Note>
+  You can find it in the **Setup** menu. Click **Setup**, then **Meta Activity Log**.
+</Note>
+
+{/* Screenshot: Meta Activity Log page with sent and failed messages */}
+
+## What you get
+
+<CardGroup cols={2}>
+  <Card title="Check sent messages" icon="circle-check">
+    See when each message was sent.
+  </Card>
+  <Card title="Find failed messages" icon="circle-x">
+    Filter by **Error** to see messages that failed.
+  </Card>
+  <Card title="See why it failed" icon="info">
+    See the reason Meta gave for the failed message.
+  </Card>
+  <Card title="All channels in one place" icon="layers">
+    See messages from all your Instagram accounts and Facebook Pages.
+  </Card>
+</CardGroup>
+
+## Open the Meta Activity Log
+
+1. In the left menu, click **Setup**.
+2. Click **Meta Activity Log**.
+
+You can see this item only if your role allows it.
+
+## What you see in the list
+
+| Column       | What it shows                                                   |
+| ------------ | --------------------------------------------------------------- |
+| **Name**     | The person who received the message.                            |
+| **Channel**  | The account the message was sent from.                          |
+| **Category** | The type of message. See the table below.                       |
+| **Status**   | **Success** if the message was sent, or **Error** if it failed. |
+| **Error**    | The reason from Meta, if the message failed.                    |
+| **When**     | The date and time.                                              |
+
+### Message categories
+
+| Category           | What it is                                                                            |
+| ------------------ | ------------------------------------------------------------------------------------- |
+| **Private Reply**  | The first DM sent after someone comments, from a **Comment → DM** automation or flow. |
+| **Comment Reply**  | A public reply to a comment from a **Comment auto-reply** automation.                 |
+| **Mention Reply**  | A reply to someone who mentioned you.                                                 |
+| **DM Auto-Reply**  | An automatic reply to a DM, story mention, or story reply.                            |
+| **Direct Message** | A message sent by a flow, or a request to follow you or share an email.               |
+| **Button Message** | A message with buttons sent by a flow or a follow or email request.                   |
+| **Chat Reply**     | A message sent by a team member from **Chat**.                                        |
+| **Ice Breakers**   | Your ice breakers being saved to Meta.                                                |
+
+## Find a message
+
+1. Click **Filters**.
+2. Choose a **Category**, **Status**, **Channel**, or dates in **From** and **To**.
+3. Click **Clear filters** to remove the filters.
+
+Click **Refresh** to see the latest messages.
+
+<Tip>
+  To see only failed messages, set **Status** to **Error**.
+</Tip>
+
+## See the details of one message
+
+Click the channel name in a row to open **Send Attempt Detail**.
+
+* It shows the technical details of the message.
+* If you contact support about a failed message, share a screenshot of this panel. It helps us find the problem faster.
+
+## Common reasons a message fails
+
+| What happened                                             | What to do                                                                          |
+| --------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| The person last messaged you more than 24 hours ago.      | Wait for the person to message you again. Meta allows replies only within 24 hours. |
+| The comment already received a private reply.             | Nothing. Meta allows only one private reply for each comment.                       |
+| The channel stopped working.                              | Reconnect the channel in **Channels**.                                              |
+| Messaging is turned off on Meta.                          | Turn it back on in your Instagram or Facebook settings.                             |
+| The person blocked your account or deleted their account. | Nothing. You cannot message this person.                                            |
+
+Learn more about fixing channels in [Connect your accounts](/channels/connect-accounts).
+
+## How long entries are kept
+
+* Each entry stays in the log for **90 days**.
+* The technical details in **Send Attempt Detail** stay for **14 days**.
+* Comentify removes them automatically after that.
+
+## Clear the log
+
+You can delete log entries:
+
+* Select one or more rows and delete them.
+* Or click **Clear Logs** to delete all entries. You will see **Clear all activity logs?** first.
+
+You cannot undo this.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="A person says they did not get my message. How do I check?">
+    - Open the **Meta Activity Log** and search for their name.
+    - If the status is **Success**, Meta accepted the message. Ask the person to check their message requests folder.
+    - If the status is **Error**, check the reason in the **Error** column.
+  </Accordion>
+  <Accordion title="My automation did not reply, and I see nothing in the log. Why?">
+    - Comentify did not try to send a message, so there is no entry.
+    - The comment may not contain your keyword, or the automation may be turned off.
+    - See the checks in [Automations](/automation/automations).
+  </Accordion>
+  <Accordion title="What is the difference from the Activity Log?">
+    - The **Activity Log** shows actions people take in your workspace.
+    - The **Meta Activity Log** shows messages Comentify tried to send to Meta.
+  </Accordion>
+  <Accordion title="Do failed messages use credits?">
+    - No. Comentify uses credits only when Meta accepts a message.
+  </Accordion>
+</AccordionGroup>
+
+## Where to next
+
+<CardGroup cols={2}>
+  <Card title="Activity log" icon="history" href="/activity/activity-log">
+    See who did what in your workspace.
+  </Card>
+  <Card title="Chat" icon="messages-square" href="/inbox/shared-inbox">
+    Read and reply to Instagram and Facebook messages.
+  </Card>
+</CardGroup>

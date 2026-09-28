@@ -59,6 +59,13 @@
             ]
           },
           {
+            "group": "Activity log",
+            "pages": [
+              "activity/activity-log",
+              "activity/meta-activity-log"
+            ]
+          },
+          {
             "group": "AI Features",
             "pages": [
               "ai/overview",
