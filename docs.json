@@ -27,11 +27,11 @@
           {
             "group": "Get Started",
             "pages": [
-              "introduction",
-              "quickstart",
-              "create-workspace",
-              "choose-plan",
-              "dashboard"
+              "get-started/introduction",
+              "get-started/quickstart",
+              "get-started/create-workspace",
+              "get-started/choose-plan",
+              "get-started/dashboard"
             ]
           },
           {
@@ -80,25 +80,6 @@
               "settings/billing",
               "settings/account"
             ]
-          },
-          {
-            "group": "AI Features",
-            "pages": [
-              "ai/overview",
-              "ai/ai-replies"
-            ]
-          },
-          {
-            "group": "Analytics & Team",
-            "pages": [
-              "analytics/overview"
-            ]
-          },
-          {
-            "group": "Account & Billing",
-            "pages": [
-              "account/faq"
-            ]
           }
         ]
       }
@@ -129,7 +110,16 @@
     { "source": "/automation/workflows", "destination": "/automation/flows" },
     { "source": "/team/team-access", "destination": "/setup/team-roles" },
     { "source": "/account/plans", "destination": "/settings/billing" },
-    { "source": "/account/settings", "destination": "/settings/workspace" }
+    { "source": "/account/settings", "destination": "/settings/workspace" },
+    { "source": "/ai/overview", "destination": "/get-started/dashboard" },
+    { "source": "/ai/ai-replies", "destination": "/get-started/dashboard" },
+    { "source": "/analytics/overview", "destination": "/get-started/dashboard" },
+    { "source": "/account/faq", "destination": "/get-started/introduction" },
+    { "source": "/introduction", "destination": "/get-started/introduction" },
+    { "source": "/quickstart", "destination": "/get-started/quickstart" },
+    { "source": "/create-workspace", "destination": "/get-started/create-workspace" },
+    { "source": "/choose-plan", "destination": "/get-started/choose-plan" },
+    { "source": "/dashboard", "destination": "/get-started/dashboard" }
   ],
   "icons": {
     "library": "lucide"
