@@ -1,0 +1,126 @@
+---
+title: "When a keyword is already in use"
+sidebarTitle: "Keyword in use"
+icon: "triangle-alert"
+description: "Why Comentify stops two automations or flows from using the same keyword, and how to fix each message you may see."
+keywords: ["Comentify", "keyword conflict", "keyword already in use", "automation conflict", "flow conflict"]
+---
+
+Sometimes Comentify stops you from saving an automation or flow because the keyword is already in use. This is called a **conflict**.
+
+* Another automation or flow already uses the same keyword.
+* If both were active, Comentify would not know which one should reply.
+* Comentify blocks the conflict before you save.
+
+{/* Screenshot: Automation form showing a keyword conflict box with the other automation and its switch */}
+
+## When this happens
+
+Automations and flows use the same keyword list. They conflict only when **all** of these are true:
+
+* They use the **same channel**.
+* They use the **same trigger type**, such as **Comment → DM**.
+* They are both **switched on**. For flows, this means **Published**.
+* They target the **same contact types**, or one targets everyone.
+
+If any one of these is different, there is no conflict.
+
+| Example                                                              | Problem? | Why                                                         |
+| -------------------------------------------------------------------- | :----: | ----------------------------------------------------------- |
+| Two **Comment → DM** automations use "price" on the same channel.    |   Yes  | Same channel, type, and keyword.                            |
+| A **Comment → DM** automation and **Comment → DM** flow use "price". |   Yes  | Automations and flows share keywords.                       |
+| A **Comment → DM** and **Comment auto-reply** use "price".           |   No   | They use different types.                                   |
+| "price" is used on Instagram and Facebook.                           |   No   | They are different channels.                                |
+| "price" is used for **Lead** and **Customer** contacts.              |   No   | Only one contact type can match.                            |
+| "price" is in an automation that is switched off.                    |   No   | Off automations and unpublished flows do not hold keywords. |
+
+## Where you see it
+
+* **In the automation form:** a red box appears in **Trigger & matching**. You cannot click **Continue** until you fix the conflict.
+* **In the flow builder:** the **Trigger** node shows the problem. You cannot publish until you fix it.
+
+The box shows the other automation or flow. Under **Resolve by turning one off or deleting it**, you can switch it off or delete it.
+
+## The messages and how to fix them
+
+Find the message you see, then follow the fix. Each fix works the same for automations and flows.
+
+<AccordionGroup>
+  <Accordion title="Two automations both reply to every comment" icon="copy">
+    **What you see:** **Conflicts with another automation** — "Only one automation can reply to every comment."
+
+    **What happened:** two automations or flows are set to **Any message**. Both want to answer every comment, so Comentify cannot choose one.
+
+    **Fix it (pick one):**
+    - Turn off one of the two.
+    - Or give one of them a keyword. Change **Any message** to **Contains keyword**.
+  </Accordion>
+
+  <Accordion title="Your automation would stop other keywords from working" icon="shield-alert">
+    **What you see:** **Conflicts with another automation** — "This would block the keywords below."
+
+    **What happened:** your automation is set to **Any message**, so it answers every comment. Another automation already answers the keyword "price". Your automation would answer first, so the "price" automation would never work.
+
+    **Fix it (pick one):**
+    - Give your automation a keyword instead of **Any message**.
+    - Or turn off the other automation.
+  </Accordion>
+
+  <Accordion title="Another automation already replies to every comment" icon="message-circle-x">
+    **What you see:** **Conflicts with another automation** — "The automation below already replies to every comment."
+
+    **What happened:** another automation or flow is set to **Any message**. It answers every comment first, so your keyword would never get a turn.
+
+    **Fix it (pick one):**
+    - Turn off the other one.
+    - Or change the other one from **Any message** to a keyword.
+  </Accordion>
+
+  <Accordion title="Two automations use the same keyword" icon="tag">
+    **What you see:** **Keyword already in use**
+
+    **What happened:** another automation or flow already uses your keyword, like "price", on the same post.
+
+    **Fix it (pick one):**
+    - Use a different keyword, like "cost".
+    - Or edit or turn off the other one.
+  </Accordion>
+
+  <Accordion title="One keyword is inside another keyword" icon="text-search">
+    **What you see:** **Keyword overlaps another one**
+
+    **What happened:** one keyword is hidden inside the other. For example, "sale" is inside "wholesale". A comment with "wholesale" would match both.
+
+    **Fix it (pick one):**
+    - Use a keyword that is not inside the other one.
+    - Or change **Match mode** to **Exact match**, so only the full word matches.
+    - Or edit the other one.
+  </Accordion>
+</AccordionGroup>
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Can I get a public reply and a DM for the same keyword?">
+    - Yes. Use one **Comment auto-reply** and one **Comment → DM**.
+    - They are different types, so they do not conflict. Both can reply.
+  </Accordion>
+  <Accordion title="I turned an automation off. Can I use its keyword now?">
+    - Yes. Switched-off automations and unpublished flows free their keywords.
+    - If you turn the old one on again, Comentify checks for conflicts again.
+  </Accordion>
+  <Accordion title="Can I use the same keyword on two channels?">
+    - Yes. Each channel has its own keywords.
+  </Accordion>
+</AccordionGroup>
+
+## Where to next
+
+<CardGroup cols={2}>
+  <Card title="Automations" icon="zap" href="/automation/automations">
+    Reply to comments and messages for you.
+  </Card>
+  <Card title="Flows" icon="workflow" href="/automation/flows">
+    Build step-by-step chats with questions and buttons.
+  </Card>
+</CardGroup>

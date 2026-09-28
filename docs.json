@@ -49,11 +49,13 @@
             ]
           },
           {
-            "group": "Automation",
+            "group": "Automations & Flows",
             "pages": [
-              "automation/comment-replies",
-              "automation/dm-automation",
-              "automation/workflows"
+              "automation/automations",
+              "automation/write-messages",
+              "automation/flows",
+              "automation/flow-steps",
+              "automation/keyword-in-use"
             ]
           },
           {
@@ -101,7 +103,10 @@
   },
   "redirects": [
     { "source": "/connecting-accounts", "destination": "/channels/connect-accounts" },
-    { "source": "/inbox/lead-capture", "destination": "/inbox/contacts" }
+    { "source": "/inbox/lead-capture", "destination": "/inbox/contacts" },
+    { "source": "/automation/comment-replies", "destination": "/automation/automations" },
+    { "source": "/automation/dm-automation", "destination": "/automation/automations" },
+    { "source": "/automation/workflows", "destination": "/automation/flows" }
   ],
   "icons": {
     "library": "lucide"

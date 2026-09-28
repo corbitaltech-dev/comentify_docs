@@ -1,0 +1,238 @@
+---
+title: "Automations"
+sidebarTitle: "Automations"
+icon: "zap"
+description: "Create rules that automatically reply to comments, DMs, mentions, and stories."
+keywords: ["Comentify", "automations", "Instagram comment to DM", "comment auto-reply", "DM auto-reply", "story reply automation"]
+---
+
+An **automation** is a rule that sends a reply for you.
+
+- Choose what starts it, such as a comment containing **price**.
+- Choose what Comentify sends.
+- Comentify sends the reply automatically whenever the rule matches.
+
+For example: "When someone comments **price** on my post, send them a DM with the price."
+
+{/* Screenshot: Automations page with a list of automations */}
+
+## What you get
+
+<CardGroup cols={2}>
+  <Card title="Automatic replies" icon="moon">
+    Reply to comments and messages automatically, even when you are not available.
+  </Card>
+  <Card title="Choose your posts" icon="target">
+    Apply an automation to one post, all posts, or your next post.
+  </Card>
+  <Card title="Match keywords" icon="text-search">
+    Reply when a comment or message matches your keywords.
+  </Card>
+  <Card title="Choose who gets replies" icon="users">
+    Reply to leads, guests, customers, or everyone.
+  </Card>
+</CardGroup>
+
+## Before you start
+
+<AccordionGroup>
+  <Accordion title="A connected channel" icon="plug">
+    - Each automation works on one channel.
+    - Connect your Instagram account or Facebook Page first.
+
+    Learn more: [Connect your accounts](/channels/connect-accounts)
+  </Accordion>
+</AccordionGroup>
+
+## The 6 automation types
+
+The automation type decides what starts it and what Comentify sends.
+
+| Type | Starts when… | Comentify sends… | Works on |
+|---|---|---|---|
+| **Comment → DM** | someone comments on your post. | a private DM to that person. | Instagram and Facebook |
+| **Comment auto-reply** | someone comments on your post. | a public reply under their comment. | Instagram and Facebook |
+| **DM auto-reply** | someone sends you a DM. | a DM back. | Instagram and Facebook |
+| **Mention** | someone @mentions you in a comment. | a DM to that person. | Instagram only |
+| **Story mention** | someone mentions you in their story. | a DM to that person. | Instagram only |
+| **Story reply** | someone replies to your story. | a DM to that person. | Instagram only |
+
+<Tip>
+  To send both a public reply and a DM for the same comment, create two automations: **Comment auto-reply** and **Comment → DM**. You can use the same keyword in both.
+</Tip>
+
+<Note>
+  **Mention**, **Story mention**, and **Story reply** are available only for Instagram. They do not appear for Facebook Pages.
+</Note>
+
+## Create an automation
+
+Go to **Automations** and click **Add automation**. The form has three steps. **Live Preview** on the right shows how your message will look.
+
+### Step 1: Trigger & matching
+
+Choose **when** the automation should run.
+
+<Steps>
+  <Step title="Set the name, channel and trigger" icon="tag">
+    - **Name:** enter a name, such as "Price reply".
+    - **Channel:** select the account this automation will use.
+    - **Trigger:** select one of the 6 automation types.
+  </Step>
+
+  <Step title="Choose posts (comment types only)" icon="image">
+    Under **Scope**, choose in which posts the automation should trigger.
+
+    | Option | What it does |
+    |---|---|
+    | **All posts** | Works on every post. |
+    | **A specific post** | Works on one selected post. |
+    | **My next post** | Waits for your next post and works only on it. |
+    | **Every post from now on** | Moves to your newest post whenever you publish one. |
+
+    For **A specific post**, select a post from the list. Search by caption, or click **Refresh from Meta** if the post is missing.
+  </Step>
+
+  <Step title="Choose contact types (optional)" icon="users">
+    - Under **Contact types**, select **Lead**, **Guest**, or **Customer**.
+    - The automation replies only to the selected contact types.
+    - Leave it empty to reply to everyone.
+  </Step>
+
+  <Step title="Choose how to match" icon="text-search">
+    Under **Match mode**, choose one:
+
+    | Match mode | Replies when… | Example with keyword "price" |
+    |---|---|---|
+    | **Contains keyword** | the keyword appears anywhere in the comment or message. | "What's the price?" matches. |
+    | **Exact match** | the comment or message is only the keyword. | Only "price" matches. |
+    | **Any message** | any message or comment is received. | Every comment matches. |
+
+    <Note>
+      **Mention**, **Story mention**, and **Story reply** always reply to every matching event. They do not use keywords.
+    </Note>
+  </Step>
+
+  <Step title="Set extra options" icon="settings-2">
+    - **Only on first interaction:** reply only to the person's first comment or message.
+      - For comments, choose **First on this account** or **First on this post**.
+    - **Case-sensitive matching:** "Sale" does not match "sale". Leave this off unless you need case-sensitive matching.
+  </Step>
+
+  <Step title="Continue" icon="arrow-right">
+    Click **Continue**.
+
+    If you see a red box, the keyword is already used by another automation or flow. See [When a keyword is already in use](/automation/keyword-in-use).
+  </Step>
+</Steps>
+
+### Step 2: Content
+
+Choose **what** Comentify sends.
+
+- **Comment auto-reply** shows **Public reply**.
+- **Mention** also shows **Public reply**, but Comentify sends it as a DM.
+- Other automation types show **Direct message**.
+- Write your message and add the person's name, buttons, photos, and more.
+- Click **Add variation** to add different versions of the message. Comentify uses a different version each time.
+
+Learn more in [Write your messages](/automation/write-messages).
+
+### Step 3: Review
+
+- Check the **Automation summary**.
+- Keep **Turn on now** enabled if you want the automation to start immediately.
+- Click **Save**.
+
+You see **Automation created**.
+
+<Check>
+  Your automation is created with the selected trigger, post, keywords, and message.
+</Check>
+
+## How "My next post" works
+
+Use **My next post** when you want to prepare an automation before publishing.
+
+1. Create the automation with **My next post**.
+2. It shows **Waiting for your next post**.
+3. Publish your post.
+4. Comentify finds the new post and connects the automation to it.
+5. It then shows **Attached to a post**.
+
+The automation stays on that post. It does not move to later posts. To use it again, select **My next post** again.
+
+<Tip>
+  Comentify checks for new posts every hour, so the automation may start shortly after you publish.
+</Tip>
+
+## Manage your automations
+
+| What you want to do | How to do it |
+|---|---|
+| Turn on or off | Use the **Active** switch. |
+| Edit | Click the menu (⋮), then **Edit**. |
+| Delete | Click the menu (⋮), then **Delete**. This cannot be undone. |
+| Find an automation | Use **Trigger**, **Posts**, **Active**, **Replies to every comment**, or **Not currently running** filters. |
+
+### Why an automation is "not currently running"
+
+An automation can be active but not running when:
+
+- its channel is not working. Reconnect it in **Channels**.
+- it uses **My next post** and you have not published a post yet.
+- it uses **Every post from now on** and no post is attached yet.
+
+Use the **Not currently running** filter to find these automations.
+
+## Rules from Meta
+
+Some comments and messages may not receive a reply because of Meta's rules.
+
+- **One private reply per comment:** Meta allows only one DM for each comment.
+- **24-hour window:** a DM can be sent only within 24 hours of the person's last message.
+
+Comentify also skips a person when:
+
+- A team member replied to them in **Chat** within the last 24 hours.
+- Their **Active** switch is off in **Contacts**.
+- They are already in a flow.
+- You have no credits left.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Why did my automation not reply?">
+    - Make sure the automation is on and the channel is **Active** in **Channels**.
+    - Check that the comment contains the correct keyword and the right post is selected.
+    - Make sure you did not comment from your own account.
+    - Check **Setup** → **Meta Activity Log** to see if Comentify tried to send the reply.
+  </Accordion>
+
+  <Accordion title="Can one automation work on two channels?">
+    - No. Each automation works on one channel.
+    - Create a separate automation for each channel.
+  </Accordion>
+
+  <Accordion title="What is the difference between an automation and a flow?">
+    - An automation sends one reply and stops.
+    - A flow can have multiple steps, such as questions and buttons.
+    - Learn more in [Flows](/automation/flows).
+  </Accordion>
+
+  <Accordion title="Does each reply use credits?">
+    - Yes. Each message sent by Comentify uses credits.
+    - See [Plans](/account/plans) for details.
+  </Accordion>
+</AccordionGroup>
+
+## Where to next
+
+<CardGroup cols={2}>
+  <Card title="Write your messages" icon="square-pen" href="/automation/write-messages">
+    Add names, buttons, photos, and more to your replies.
+  </Card>
+  <Card title="Flows" icon="workflow" href="/automation/flows">
+    Build longer chats with questions and buttons.
+  </Card>
+</CardGroup>

@@ -1,0 +1,210 @@
+---
+title: "Flows"
+sidebarTitle: "Flows"
+icon: "workflow"
+description: "Build step-by-step chats that ask questions, show buttons, collect emails and hand people to your team."
+keywords: ["Comentify", "flows", "flow builder", "Instagram chatbot", "Messenger chatbot", "lead capture"]
+---
+
+A **flow** is a visual builder for creating step-by-step conversations.
+
+* An automation sends one reply and stops.
+* A flow can ask a question, wait for an answer and take different actions.
+* You build a flow by adding steps and connecting them.
+
+For example:
+
+1. Someone comments **guide** on your post.
+2. The flow sends a DM: "Want the free guide? Reply YES."
+3. The person replies "YES".
+4. The flow asks for their email and saves it.
+5. The flow sends the guide link.
+
+{/* Screenshot: Flow builder with a trigger, a question, buttons and an end step */}
+
+## What you get
+
+<CardGroup cols={2}>
+  <Card title="Real conversations" icon="messages-square">
+    Ask questions and wait for answers.
+  </Card>
+  <Card title="Different paths" icon="split">
+    Show buttons and take different actions for each choice.
+  </Card>
+  <Card title="Leads saved for you" icon="mail">
+    Collect emails and update contacts automatically.
+  </Card>
+  <Card title="Hand over to your team" icon="user-round">
+    Send the chat to a team member when the flow is done.
+  </Card>
+</CardGroup>
+
+## Flow or automation?
+
+| You want to…                             | Use                                      |
+| ---------------------------------------- | ---------------------------------------- |
+| Send one reply to a comment or message.  | An [automation](/automation/automations) |
+| Post a public reply under a comment.     | An automation (**Comment auto-reply**)   |
+| Ask a question and wait for the answer.  | A flow                                   |
+| Show buttons and take different actions. | A flow                                   |
+| Collect an email and phone number.       | A flow                                   |
+| Check a follow, then ask for an email.   | A flow                                   |
+| Hand the chat to your team.              | A flow                                   |
+
+<Tip>
+  Use an automation for simple replies. Use a flow when you need multiple steps or answers.
+</Tip>
+
+## Before you start
+
+<AccordionGroup>
+  <Accordion title="A connected channel" icon="plug">
+    - A flow runs on a connected channel.
+    Learn more: [Connect your accounts](/channels/connect-accounts)
+  </Accordion>
+  <Accordion title="A plan on paper" icon="notebook-pen">
+    - Write down the questions you want to ask.
+    - Decide what should happen after each answer.
+    - This makes the flow easier to build.
+  </Accordion>
+</AccordionGroup>
+
+## Build your first flow
+
+<Steps>
+  <Step title="Create the flow" icon="plus">
+    1. In the left menu, click **Flows**.
+    2. Click **Add flow**.
+    3. In **New flow**, enter a **Name** and choose a **Channel**.
+    4. Click **Save**.
+    
+    The flow builder opens. The flow is off until you publish it.
+  </Step>
+
+  <Step title="Set up the trigger" icon="play">
+    The **Trigger** step decides what starts the flow.
+    Click it and fill in:
+    - **What starts this flow?:** choose **Comment → DM**, **DM auto-reply**, **Story reply** or **Story mention**.
+    - **When the message…:** choose **Contains keyword**, **Exact match** or **Any message**.
+    - **Keywords:** enter your keyword, like `guide`.
+    - **Which posts?:** choose **All posts** or **A specific post**.
+
+    Learn more about these options in [Automations](/automation/automations).
+  </Step>
+
+  <Step title="Add steps" icon="list-plus">
+    - Open the step list. Steps are in two groups: **Messages** and **Logic**.
+    - Click a step, or drag it onto the board.
+    - Click a step on the board to edit its details.
+
+    See all steps in [Flow steps](/automation/flow-steps).
+  </Step>
+
+  <Step title="Join the steps" icon="spline">
+    - Drag a line from one step to the next.
+    - Steps with choices, like **Buttons**, have one line for each choice.
+    - Finish every path with an **End** or **Hand over to a person** step.
+
+  Click **Rearrange** to organize the board.
+  </Step>
+
+  <Step title="Test it with Try it" icon="flask-conical">
+    Click **Try it** to test the flow.
+    - It **Runs the draft. Nothing is sent.**
+    - Type in **Reply as the contact…**
+    - Click **Pretend they followed** to test a **Require a follow** step.
+    - Click **Restart from the trigger** to test again from the beginning.
+  </Step>
+
+  <Step title="Save and publish" icon="rocket">
+    1. Click **Save**.
+    2. Go back to **Flows**.
+    3. Turn on the **Published** switch next to your flow.
+  You see **This flow is now answering people.**
+  </Step>
+</Steps>
+
+<Check>
+  You created a flow, set its trigger, added and connected steps, tested it with **Try it**, and published it.
+</Check>
+
+## Fix problems before you save
+
+The builder checks your flow while you work. A step with a problem shows a warning, such as **2 fields to fill in** or **1 branch to connect**. You must fix these problems before saving. The **Save** button says **Fix the highlighted steps first**.
+
+| Message                                              | What to do                                                 |
+| ---------------------------------------------------- | ---------------------------------------------------------- |
+| **This node leads nowhere.**                         | Connect this step to the next one, or add an **End** step. |
+| **Nothing leads to this node, so it can never run.** | Connect another step to it, or delete it.                  |
+| **The flow needs a trigger to start from.**          | Set up the **Trigger** step.                               |
+
+## Rules for flows that start from a comment
+
+Meta allows only one plain-text private reply to each comment. So a flow with a **Comment → DM** trigger must:
+
+* start with a plain-text **Send a message** or **Ask a question** step, with no buttons, media or links.
+* send only one message before waiting for the person to reply.
+
+After the person replies, the flow can send buttons, media and other message types.
+
+<Tip>
+  A good first message: "Thanks for your comment! Reply YES and I'll send you the link." After the person replies, the flow can continue with buttons, media and other steps.
+</Tip>
+
+## How flows behave
+
+* **One flow at a time.** A person can only be in one flow at a time.
+* **Waiting for an answer.** If the person does not reply within 24 hours, the flow stops.
+* **When you reply yourself.** If a team member replies in **Chat**, the flow pauses for that chat for 24 hours.
+* **Changes go live at once.** When you save a published flow, the changes are active immediately. Use **Try it** before saving.
+* **Ice breakers.** An ice breaker can start a published flow. Learn more in [Ice breakers](/channels/ice-breakers).
+
+## Manage your flows
+
+| What you want to do | How to do it                                                                         |
+| ------------------- | ------------------------------------------------------------------------------------ |
+| Turn on or off      | Use the **Published** switch in the list.                                            |
+| Change it           | Click the flow name to open the builder.                                             |
+| Delete it           | Click the menu (⋮), then delete. People in the middle of the flow will not continue. |
+| Find one            | Use the filters: **Trigger**, **Published** or **Not currently running**.            |
+
+When you turn off a flow, you see **It has stopped answering, and its keywords are free again.** Other automations and flows can now use its keywords.
+
+A **Not running** badge means the flow is published but cannot run. For example, its channel may have stopped working, or it may have no trigger.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Why did my flow not start?">
+    - Check that the **Published** switch is on.
+    - Check that the trigger is set up and the keyword matches.
+    - Check that the person is not already in another flow.
+    - Check that a team member did not reply in **Chat** in the last 24 hours.
+  </Accordion>
+  <Accordion title="Can an automation and a flow use the same keyword?">
+    - Not for the same trigger type on the same channel.
+    - Comentify will stop you and show the problem. Learn more in [When a keyword is already in use](/automation/keyword-in-use).
+  </Accordion>
+  <Accordion title="Why can I not choose Comment auto-reply as a trigger?">
+    - It send public replies, which cannot start a private chat.
+    - Use an automation for them.
+  </Accordion>
+  <Accordion title="Why can I not choose My next post?">
+    - **My next post** and **Every post from now on** are for automations only.
+    - In a flow, choose **All posts** or **A specific post**.
+  </Accordion>
+  <Accordion title="Does Try it use credits?">
+    - No. **Try it** is only a test and sends nothing to Meta.
+  </Accordion>
+</AccordionGroup>
+
+## Where to next
+
+<CardGroup cols={2}>
+  <Card title="Flow steps" icon="list-tree" href="/automation/flow-steps">
+    See every step you can add and how each one works.
+  </Card>
+  <Card title="When a keyword is already in use" icon="triangle-alert" href="/automation/keyword-in-use">
+    Fix keyword problems between your automations and flows.
+  </Card>
+</CardGroup>

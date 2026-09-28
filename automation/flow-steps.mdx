@@ -1,0 +1,329 @@
+---
+title: "Flow nodes"
+sidebarTitle: "Flow nodes"
+icon: "list-tree"
+description: "Every node you can add to a Comentify flow, what it does, and how to set it up."
+keywords: ["Comentify", "flow nodes", "flow builder nodes", "Instagram chatbot nodes", "branch on answer", "collect email"]
+---
+
+A flow is built with nodes. Each node does one job, such as sending a message or asking a question.
+
+- Add nodes from the node list in the flow builder.
+- Nodes are grouped into **Messages** and **Logic**.
+- Click a node on the board to edit its settings on the right.
+
+This page explains each node. To learn how to build a flow, see [Flows](/automation/flows).
+
+## All steps at a glance
+
+| Step                                            | What it does                                    | Waits for the person? | Has more than one path? |
+| ----------------------------------------------- | ----------------------------------------------- | :-------------------: | :---------------------: |
+| [Trigger](#trigger)                             | Starts the flow.                                |           —           |            —            |
+| [Send a message](#send-a-message)               | Sends a message and continues.                  |           No          |            No           |
+| [Ask a question](#ask-a-question)               | Asks a question and saves the answer.           |          Yes          |            No           |
+| [Buttons](#buttons)                             | Shows up to 3 buttons, each with its own path.  |          Yes          |           Yes           |
+| [Collect an email](#collect-an-email)           | Asks for an email and saves it to the contact.  |          Yes          |            No           |
+| [Require a follow](#require-a-follow)           | Checks if the person follows you.               |          Yes          |           Yes           |
+| [Send media](#send-media)                       | Sends a photo, video or audio file.             |           No          |            No           |
+| [Quick replies](#quick-replies)                 | Shows up to 13 choices, each with its own path. |          Yes          |           Yes           |
+| [Send a link button](#send-a-link-button)       | Sends buttons that open a web page.             |           No          |            No           |
+| [Branch on an answer](#branch-on-an-answer)     | Checks an answer and chooses a path.            |           No          |           Yes           |
+| [Update the contact](#update-the-contact)       | Updates the person's contact details.           |           No          |            No           |
+| [Assign the chat](#assign-the-chat)             | Assigns the chat to a team member.              |           No          |            No           |
+| [Wait](#wait)                                   | Waits before continuing.                        |           No          |            No           |
+| [Hand over to a person](#hand-over-to-a-person) | Stops the flow and asks your team to reply.     |           —           |            —            |
+| [End](#end)                                     | Stops the flow.                                 |           —           |            —            |
+
+---
+
+## Trigger
+
+**What it does:** decides when the flow starts. Every flow has one, and it cannot be deleted.
+
+**Settings:**
+
+* **What starts this flow?:** **Comment → DM**, **DM auto-reply**, **Story reply** or **Story mention**. Story options are Instagram only.
+* **When the message…:** **Contains keyword**, **Exact match** or **Any message**.
+* **Keywords:** the words that start the flow.
+* **Which posts?:** **All posts** or **A specific post** (comment triggers only).
+* **Case-sensitive matching:** "Sale" does not match "sale".
+* **First interaction only:** start only on the person's first comment or message. Choose what counts under **Counted as their first**.
+* **Contact types:** start only for **Lead**, **Guest** or **Customer**. Leave empty for everyone.
+
+<Note>
+  If you choose **Not set up yet**, the flow can be published, but it will not start.
+</Note>
+
+## Send a message
+
+**What it does:** sends a message and continues to the next step.
+
+**Settings:**
+
+* **Message** (required): write what you want to say. Type `@` to add the person's name.
+
+**Use it for:** greetings, thank-you messages and information.
+
+## Ask a question
+
+**What it does:** asks a question, waits for the person to type an answer, and saves the answer.
+
+**Settings:**
+
+* **Message** (required): write your question.
+* **Save the answer as:** a key, which is a short name for the answer, like `city` or `phone`. Comentify stores the person's answer under this key.
+  * Use only letters, numbers and `_`.
+  * Start with a letter.
+  * Give each question its own key, so answers do not mix up.
+
+**Find the answer in the @ picker:**
+
+After you save the key, the answer shows in the merge field picker in this flow.
+
+1. In any later step, type `@` in the message box.
+2. Look for `answer.` followed by your key, like `answer.city`.
+3. Click it. Comentify adds `{{answer.city}}` to your message.
+
+When the flow runs, Comentify swaps `{{answer.city}}` for what the person answer.
+
+<Note>
+  The picker shows one `answer.` entry for every **Ask a question** step in the flow. If your flow has a **Collect an email** step, you also see `answer.email`.
+</Note>
+
+**Where you can use the answer:**
+
+* **In a message:** `Great, we deliver to {{answer.city}}!`
+* **In Update the contact:** put `{{answer.phone}}` in **Phone** to save the answer on the contact.
+* **In Branch on an answer:** choose `city` in **Look at** to pick a path based on the answer.
+
+**Example:** "Which city are you in?" → **Save the answer as** `city` → next message: `Great, we deliver to {{answer.city}}!`
+
+## Buttons
+
+**What it does:** shows up to 3 buttons, waits for a selection and follows that button's path.
+
+**Settings:**
+
+* **Message above the buttons** (required): the text the person sees above the buttons, like "Do you want the price list?"
+* Click **Add** to add a button. You can add up to 3.
+
+**Settings for each button:**
+
+* **Label:** the button text, such as "Yes, please". Up to 20 characters.
+* **Value:** the name of the path, such as `YES`.
+
+Each button has its own line on the board. Connect each line to the next step.
+
+**Example:** "Do you want the price list?" → **Yes** / **No**
+
+## Collect an email
+
+**What it does:** asks for an email, waits for it and saves it to the person's contact.
+
+**Settings:**
+
+* **Message** (required): your question, such as "What's your email? I'll send the guide there."
+
+**After this step:**
+
+* The email is saved on the contact in **Contacts**.
+* Use `{{answer.email}}` in later messages.
+
+## Require a follow
+
+**What it does:** checks if the person follows your Instagram account and follows the correct path.
+
+**Settings:**
+
+* **Message** (required): tell the person why they should follow you. They see it if they do not follow you yet.
+* **Button label:** the button they tap after following, such as "I've followed". Tapping it checks again.
+* **Visit profile button** (optional): opens your Instagram profile.
+* **Extra link button** (optional): opens a web page. The link must start with `https://`.
+
+<Note>
+  This step works only on Instagram. Meta does not provide follow details for Facebook Pages.
+</Note>
+
+**Tip:** In **Try it**, click **Pretend they followed** to test the **Follows** path.
+
+## Send media
+
+**What it does:** sends a photo, video or audio file and continues.
+
+**Settings:**
+
+* Upload your file.
+* **Caption** (optional): text sent with the file. Meta sends it as a separate message after the file.
+
+## Quick replies
+
+**What it does:** shows up to 13 choices. The person taps one and the flow follows its path.
+
+**Settings:**
+
+* **Message above the quick replies** (required): the text the person sees above the choices, like "Which size do you need?"
+* Add up to 13 choices.
+
+**Settings for each choice:**
+
+* **Label:** the text shown to the person. Up to 20 characters.
+* **Value:** the name of the path.
+
+The choices disappear after the person selects one.
+
+## Send a link button
+
+**What it does:** sends buttons that open a web page. The flow continues immediately.
+
+**Settings:**
+
+* **Message above the buttons** (required): the text the person sees above the link buttons.
+* Add link buttons with a label, such as "Shop now", and a link. Links must start with `https://`.
+
+**Use it for:** shop links, booking pages and downloads.
+
+## Branch on an answer
+
+**What it does:** looks at what the person typed earlier, and sends them down one of two paths: **Yes** or **No**.
+
+Think of it as a question Comentify asks itself: *"Did the person's answer match what I am looking for?"*
+
+- If it matches, the flow goes down the **Yes** path.
+- If it does not match, the flow goes down the **No** path.
+
+### Before you use it
+
+You need an **Ask a question** step earlier in the flow. **Branch on an answer** checks the answer that step saved.
+
+### Settings
+
+Read the three boxes together, like one sentence: **Look at** `city` **Which** `is exactly` **This** `Mumbai`.
+
+| Box | What to choose | Example |
+|---|---|---|
+| **Look at** | Which saved answer to check. You see the keys from your **Ask a question** steps. | `city` |
+| **Which** | How to compare. See the table below. | `is exactly` |
+| **This** | The word to compare with. | `Mumbai` |
+
+### The choices in "Which"
+
+| Choice | Goes down **Yes** when… | Example: the person typed "I live in Mumbai" |
+|---|---|---|
+| **contains** | the answer has your word anywhere in it. | **This** `Mumbai` → **Yes** |
+| **is exactly** | the answer is only your word, nothing more. | **This** `Mumbai` → **No**, because the answer has more words |
+| **is not** | the answer is anything other than your word. | **This** `Mumbai` → **Yes** |
+| **is empty** | the person gave no answer. | → **No** |
+| **is not empty** | the person gave any answer. | → **Yes** |
+
+For **is empty** and **is not empty**, leave **This** blank. There is nothing to compare.
+
+<Tip>
+  Capital letters do not matter. "YES", "Yes" and "yes" all match `yes`.
+</Tip>
+
+<Tip>
+  People type in many ways. Use **contains** instead of **is exactly** when you can. For example, **contains** `yes` matches "yes", "Yes please" and "yes!!".
+</Tip>
+
+### Join the two paths
+
+On the board, this step has two lines: **Yes** and **No**. Join each line to the step that should come next. Both lines must be joined before you can publish.
+
+### Example
+
+1. **Ask a question:** "Which city are you in?" → **Save the answer as** `city`.
+2. **Branch on an answer:** **Look at** `city`, **Which** `contains`, **This** `Mumbai`.
+3. **Yes path → Send a message:** "Great news, we deliver in Mumbai today!"
+4. **No path → Send a message:** "We deliver to your city in 3 to 5 days."
+
+## Update the contact
+
+**What it does:** updates the person's details in **Contacts**.
+
+**Settings:** fill in only the details you want to change:
+
+* **First name**, **Last name**, **Email**, **Phone**
+* **Type**, **Status**, **Source**
+* **Groups:** adds the person to these groups. It does not remove them from other groups.
+
+Empty fields stay unchanged.
+
+**Example:** after **Collect an email**, set **Type** to **Lead** and **Status** to "Interested".
+
+## Assign the chat
+
+**What it does:** assigns the chat and contact to a team member.
+
+**Settings:**
+
+* Choose the team member.
+
+<Note>
+  If the flow started from a comment and the person has not replied yet, there is no chat to assign. Comentify skips this step.
+</Note>
+
+## Wait
+
+**What it does:** pauses the flow before moving to the next step.
+
+**Settings:**
+
+* **Wait for:** choose how long to wait. The maximum is 23 hours, 59 minutes and 59 seconds.
+
+<Note>
+  Meta allows messages only within 24 hours of the person's last message.
+</Note>
+
+## Hand over to a person
+
+**What it does:** stops the flow, pauses automatic replies and marks the chat **Needs you** in **Chat**.
+
+**Settings:** none.
+
+**Tip:** Add a **Send a message** step before it, such as "Thanks! A team member will reply soon."
+
+Learn more: [Chat](/inbox/shared-inbox#when-a-person-needs-you)
+
+## End
+
+**What it does:** stops the flow.
+
+**Settings:** none.
+
+Every path in your flow should end with **End** or **Hand over to a person**.
+
+---
+
+## Example: a lead flow
+
+<Steps>
+  <Step title="Trigger" icon="play">
+    **Comment → DM**, keyword `guide`.
+  </Step>
+  <Step title="Ask a question" icon="message-circle-question-mark">
+    "Want my free guide? Reply YES!" Save the answer as `reply`.
+  </Step>
+  <Step title="Collect an email" icon="mail">
+    "Great! What's your email?"
+  </Step>
+  <Step title="Update the contact" icon="user-pen">
+    Set **Type** to **Lead**.
+  </Step>
+  <Step title="Send a link button" icon="link">
+    `Here is your guide, {{first_name}}!` with a **Download** button.
+  </Step>
+  <Step title="End" icon="circle-stop">
+    The flow stops.
+  </Step>
+</Steps>
+
+## Where to next
+
+<CardGroup cols={2}>
+  <Card title="When a keyword is already in use" icon="triangle-alert" href="/automation/keyword-in-use">
+    Fix keyword problems between your automations and flows.
+  </Card>
+  <Card title="Answer messages in Chat" icon="messages-square" href="/inbox/shared-inbox">
+    Reply to chats that your flows hand over to your team.
+  </Card>
+</CardGroup>

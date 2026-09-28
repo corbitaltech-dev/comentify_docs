@@ -1,0 +1,248 @@
+---
+title: "Write your messages"
+sidebarTitle: "Write your messages"
+icon: "square-pen"
+description: "Create messages with text, media, buttons, personal details, follow requests and email collection."
+keywords: ["Comentify", "message editor", "merge fields", "Instagram DM buttons", "follow gate", "collect email"]
+---
+
+Refer this page to learn how to create messages in Comentify.
+
+* Create messages in **Automations**, **Flows**, **Ice Breakers** and **Chat**.
+* Add text, photos, videos, audio, files, buttons and quick replies.
+* Use merge fields to add the person's name and other details.
+
+{/* Screenshot: Content step of an automation with the message editor and Live Preview */}
+
+## What you can add
+
+<CardGroup cols={2}>
+  <Card title="Personal messages" icon="user">
+    Add the person's name and other details using `@`.
+  </Card>
+  <Card title="Rich messages" icon="image">
+    Add photos, videos, audio, files and buttons.
+  </Card>
+  <Card title="Message variations" icon="shuffle">
+    Create different versions so every reply does not look the same.
+  </Card>
+  <Card title="Follow or email" icon="user-plus">
+    Ask people to follow you or share their email before sending the message.
+  </Card>
+</CardGroup>
+
+## Message variations
+
+A variation is another version of the same message.
+
+* Click **Add variation** to add another version.
+* Comentify randomly chooses one variation when replying.
+* This helps make replies look more natural.
+
+For example:
+
+* Variation 1: `Hi {{first_name}}! Here is the link 👇`
+* Variation 2: `Thanks for asking, {{first_name}}! Here you go 👇`
+
+<Note>
+  For **Comment → DM**, the first variation is also used as the first private reply. It must contain plain text only.
+</Note>
+
+## Add message blocks
+
+A message is made of blocks. Click **Add block** and choose what you need.
+
+| Block             | What it does                            |
+| ----------------- | --------------------------------------- |
+| **Text**          | Adds your message text.                 |
+| **Media**         | Adds a photo, video, audio or PDF file. |
+| **Buttons**       | Adds up to 3 buttons.                   |
+| **Quick replies** | Adds up to 13 quick answer choices.     |
+
+### Buttons
+
+Buttons have two types:
+
+* **Open a link** — Opens a web page.
+* **Send a payload** — Sends a value back to Comentify.
+
+Most users use **Open a link** for shops, bookings and downloads.
+
+<Tip>
+  To ask a question and take different actions based on the answer, use a Flow with **Buttons** or **Quick replies**. Learn more in [Flow steps](/automation/flow-steps).
+</Tip>
+
+### Message limits
+
+Meta sets the following limits:
+
+| Item                   | Limit                                  |
+| ---------------------- | -------------------------------------- |
+| Text                   | About 1000 characters                  |
+| Buttons                | Up to 3, with 20 characters per label  |
+| Quick replies          | Up to 13, with 20 characters per label |
+| Photos                 | Up to 8 MB each, up to 10 photos       |
+| Video, audio and files | Up to 25 MB each                       |
+
+## Text-only messages
+
+Some messages can only contain plain text. In these cases, you cannot add media or buttons.
+
+| Message                        | Reason                                             |
+| ------------------------------ | -------------------------------------------------- |
+| **Comment → DM**               | Meta allows only a plain-text private reply.       |
+| **Comment auto-reply**         | Public comment replies must be plain text.         |
+| **Mention** reply              | Comentify sends it as a DM. |
+
+<Tip>
+  To send buttons or media after a comment, use a Flow. Send the first message as plain text, then use the Flow to send buttons, photos or other content.
+</Tip>
+
+## Add names and other details
+
+Type `@` in the message box to add a **merge field**.
+
+A merge field is replaced with the person's real information when the message is sent.
+
+For example:
+
+`Hi {{first_name}}!`
+
+can become:
+
+`Hi Priya!`
+
+| Merge field            | Shows                                          |
+| ---------------------- | ---------------------------------------------- |
+| `{{first_name}}`       | Person's first name                            |
+| `{{last_name}}`        | Person's last name                             |
+| `{{name}}`             | Person's full name                             |
+| `{{username}}`         | Instagram username *(Instagram only)*          |
+| `{{account_name}}`     | Your account name                              |
+| `{{account_username}}` | Your Instagram username *(Instagram only)*     |
+| `{{keyword}}`          | Keyword used by the person                     |
+| `{{comment_text}}`     | Full comment text                              |
+| `{{follower_count}}`   | Person's follower count *(Instagram DMs only)* |
+
+### Add a fallback
+
+If Comentify does not have the information, you can show a backup word.
+
+Use `|` inside the merge field.
+
+For example:
+
+`{{first_name|there}}`
+
+This shows the person's name if available. If not, it shows **there**.
+
+`Hi {{first_name|there}}!`
+
+can become:
+
+* `Hi Priya!`
+* `Hi there!`
+
+<Note>
+  Merge fields marked *Instagram only* are not available for Facebook Pages because Meta does not provide these details.
+</Note>
+
+### Use answers from a Flow
+
+You can also use answers collected in a Flow.
+
+For example:
+
+`{{answer.email}}`
+
+shows the email entered by the person.
+
+Learn more in [Flow steps](/automation/flow-steps#ask-a-question).
+
+## Ask for a follow or email
+
+You can ask people to complete an action before sending your message. These are called **gates**.
+
+Gates are available for:
+
+* **DM auto-reply**
+* **Story mention**
+* **Story reply**
+
+Gates are not available for comment or mention automations because those messages can only contain plain text.
+
+You can use **one gate at a time**.
+
+<AccordionGroup>
+  <Accordion title="Require a follow" icon="user-check">
+    Send the message only after the person follows you.
+    1. Turn on **Require a follow**.
+    2. Write the message in **What should we ask them?**
+    3. Add a **Confirm button label**, such as `I've followed`.
+    4. Optionally add a **Visit profile** button or custom link.
+    The person follows you and taps the confirmation button. Comentify then checks the follow and sends your message.
+    <Note>
+      This works only on Instagram. Meta does not provide follow information for Facebook Pages.
+    </Note>
+  </Accordion>
+
+  <Accordion title="Collect an email" icon="mail">
+    Ask for the person's email before sending your message.
+    1. Turn on **Collect an email**.
+    2. Choose **Required to continue** or **Optional**.
+    3. Write your question in **What should we ask them?**
+    4. If email is optional, add a **Skip button label**, such as `Skip`.
+    The email is saved in **Contacts**.
+  </Accordion>
+</AccordionGroup>
+
+## Word warnings
+
+Comentify warns you when your message contains words that may cause problems.
+
+You can still save the message.
+
+| Warning                | Meaning                                                          |
+| ---------------------- | ---------------------------------------------------------------- |
+| **Engagement bait**    | Asking people to like, share or tag.                             |
+| **Financial promise**  | Promising guaranteed money or returns.                           |
+| **Pressure tactic**    | Using words that create unnecessary urgency.                     |
+| **Impersonation risk** | Saying that Meta or another brand supports you when it does not. |
+
+## Check your message with Live Preview
+
+Use **Live Preview** in the automation form to see how your message will look.
+
+Merge fields are shown with a sample name:
+
+**Jordan Rivera**
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Why can't I add a button to Comment → DM?">
+    - The first DM after a comment can only contain plain text.
+    - Use a Flow to send buttons after the first message.
+  </Accordion>
+
+  <Accordion title="Why is the name missing?">
+    - Comentify may not have received the person's name from Meta.
+    - Use a fallback such as `{{first_name|there}}`.
+  </Accordion>
+
+  <Accordion title="Can I use both Require a follow and Collect an email?">
+    - Not in the same automation.
+    - Use a Flow if you need both. For example, check the follow first and then ask for the email.
+  </Accordion>
+</AccordionGroup>
+
+## Where to next
+
+<CardGroup cols={2}>
+  <Card title="Flows" icon="workflow" href="/automation/flows">
+    Build longer conversations with questions, buttons and answers.
+  </Card>
+  <Card title="Flow steps" icon="list-tree" href="/automation/flow-steps">
+    See all the steps you can add to a Flow.
+  </Card>
+</CardGroup>
