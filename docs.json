@@ -66,6 +66,14 @@
             ]
           },
           {
+            "group": "Setup",
+            "pages": [
+              "setup/team-roles",
+              "setup/statuses-sources-groups",
+              "setup/canned-replies"
+            ]
+          },
+          {
             "group": "AI Features",
             "pages": [
               "ai/overview",
@@ -75,8 +83,7 @@
           {
             "group": "Analytics & Team",
             "pages": [
-              "analytics/overview",
-              "team/team-access"
+              "analytics/overview"
             ]
           },
           {
@@ -113,7 +120,8 @@
     { "source": "/inbox/lead-capture", "destination": "/inbox/contacts" },
     { "source": "/automation/comment-replies", "destination": "/automation/automations" },
     { "source": "/automation/dm-automation", "destination": "/automation/automations" },
-    { "source": "/automation/workflows", "destination": "/automation/flows" }
+    { "source": "/automation/workflows", "destination": "/automation/flows" },
+    { "source": "/team/team-access", "destination": "/setup/team-roles" }
   ],
   "icons": {
     "library": "lucide"

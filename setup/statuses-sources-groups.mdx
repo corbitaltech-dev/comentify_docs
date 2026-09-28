@@ -1,0 +1,121 @@
+---
+
+title: "Statuses, sources and groups"
+sidebarTitle: "Statuses, sources and groups"
+icon: "list"
+description: "Create labels to organize your contacts by status, source and group."
+keywords: ["Comentify", "contact status", "contact source", "contact groups", "sort contacts", "segments"]
+---
+
+Statuses, sources and groups are labels you can use to organize your contacts.
+
+| Label      | What it tells you                  | Examples                   | How many per contact |
+| ---------- | ---------------------------------- | -------------------------- | -------------------- |
+| **Status** | Where the person is with you.      | New, Interested, Paid      | One                  |
+| **Source** | Where the person came from.        | Instagram, Website, Ads    | One                  |
+| **Group**  | Which lists the person belongs to. | VIP, Wholesale, Newsletter | Many                 |
+
+A new workspace has none of these. Create the ones you need.
+
+{/* Screenshot: Statuses page with a few colored statuses */}
+
+## What you get
+
+<CardGroup cols={2}>
+  <Card title="Know where each person stands" icon="flag">
+    See who is new, interested or has paid.
+  </Card>
+  <Card title="Know what works" icon="chart-column">
+    See which sources bring you the most contacts.
+  </Card>
+  <Card title="Build your own lists" icon="list-checks">
+    Create groups like VIP or Wholesale.
+  </Card>
+  <Card title="Find people fast" icon="search">
+    Filter contacts by status, source or group.
+  </Card>
+</CardGroup>
+
+## Where you use them
+
+* **Contacts:** set a contact's status, source and groups, and filter contacts by them.
+* **Contact defaults:** automatically give new contacts a status, source and groups.
+* **Chat:** see the person's status and source in the contact details panel.
+* **Flows:** the **Update the contact** node can change a person's status, source and groups.
+
+<Tip>
+  Set up your statuses and sources before connecting your first channel. This helps your first contacts get the right labels.
+</Tip>
+
+## Create a status
+
+1. Click **Setup** in the left menu, then click **Statuses**.
+2. Click **Add Status**.
+3. Enter a **Name**, like "Interested".
+4. Choose a **Color** for the status badge.
+5. Click **Save**.
+
+**Good statuses to start with:** New, Interested, Waiting for payment, Paid, Not interested.
+
+## Create a source
+
+1. Click **Setup** in the left menu, then click **Sources**.
+2. Click **Add Source**.
+3. Enter a **Name**, like "Instagram".
+4. Click **Save**.
+
+**Good sources to start with:** Instagram, Facebook, Website, Ads, Referral.
+
+## Create a group
+
+1. Click **Setup** in the left menu, then click **Groups**.
+2. Click **Add Group**.
+3. Enter a **Name**, like "VIP".
+4. Click **Save**.
+
+**Good groups to start with:** VIP, Wholesale, Newsletter, Event guests.
+
+<Note>
+  You can also create a status, source or group from a dropdown while editing a contact or setting up contact defaults.
+</Note>
+
+## Edit or delete
+
+Click the menu (⋮) next to a status, source or group, then click **Edit** or **Delete**.
+
+| When you delete a… | What happens to contacts                                         |
+| ------------------ | ---------------------------------------------------------------- |
+| **Status**         | Contacts stay. Their status becomes empty and shows **Not set**. |
+| **Source**         | Contacts stay. Their source becomes empty and shows **Not set**. |
+| **Group**          | Contacts stay. The deleted group is removed from them.           |
+
+You cannot undo a delete. Before deleting one, check the **Contact defaults** and flows that use it.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="What is the difference between a status and a type?">
+    - **Type** is fixed: **Lead**, **Guest** or **Customer**.
+    - **Status** is custom: you can create any status you need.
+    - You can use both. For example, Type **Lead** with Status "Interested".
+  </Accordion>
+  <Accordion title="What is the difference between a status and a group?">
+    - A contact can have only one status at a time.
+    - A contact can belong to many groups.
+  </Accordion>
+  <Accordion title="Can I sort contacts automatically?">
+    - Yes. Use **Contact defaults** to give new contacts a status, source and groups.
+    - Or use the **Update the contact** node in a flow to change them during a chat.
+  </Accordion>
+</AccordionGroup>
+
+## Where to next
+
+<CardGroup cols={2}>
+  <Card title="Contacts" icon="contact" href="/inbox/contacts">
+    Use your labels to sort and filter contacts.
+  </Card>
+  <Card title="Canned replies" icon="message-square-text" href="/setup/canned-replies">
+    Save replies your team can use in Chat.
+  </Card>
+</CardGroup>

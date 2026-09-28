@@ -1,0 +1,195 @@
+---
+title: "Team & roles"
+sidebarTitle: "Team & roles"
+icon: "users"
+description: "Add team members to your workspace, and choose what each person can see and do with roles."
+keywords: ["Comentify", "team members", "roles", "permissions", "add user", "team access"]
+---
+
+You can add team members to your workspace, so others can help you in answer the messages.
+
+- A **team member** is a person who signs in to your workspace.
+- A **role** is a set of permissions, like "can reply in Chat" or "can delete contacts".
+- You give each team member a role. The role decides what they can see and do.
+
+{/* Screenshot: Team page with a list of team members */}
+
+## What you get
+
+<CardGroup cols={2}>
+  <Card title="Share the work" icon="users">
+    Your team can answer messages while you are busy.
+  </Card>
+  <Card title="Safe access" icon="shield-check">
+    Each person sees only what their role allows.
+  </Card>
+  <Card title="No shared passwords" icon="key-round">
+    Each team member signs in with their own email and password.
+  </Card>
+  <Card title="See who did what" icon="history">
+    The **Activity Log** shows every action and who did it.
+  </Card>
+</CardGroup>
+
+## Before you start
+
+<AccordionGroup>
+  <Accordion title="Room on your plan" icon="layers">
+    - Your plan has a limit on team members and roles.
+    - If you reach it, you see **Your current plan team limit has been reached.**
+
+    See [Plans](/account/plans) for details.
+  </Accordion>
+  <Accordion title="Create roles first" icon="shield">
+    - Every team member needs a role, unless they are an administrator.
+    - Create your roles first. It makes adding team members faster.
+  </Accordion>
+</AccordionGroup>
+
+## Create a role
+
+A role is a set of permissions. For example, a "Support" role that can read and reply in **Chat**, but cannot delete anything.
+
+<Steps>
+  <Step title="Open Roles" icon="shield">
+    Click **Setup** in the left menu, then click **Roles**.
+  </Step>
+  <Step title="Add a role" icon="plus">
+    Click **Add Role**.
+  </Step>
+  <Step title="Name the role" icon="tag">
+    Type a name, like "Support" or "Sales".
+  </Step>
+  <Step title="Choose permissions" icon="list-checks">
+    Tick what this role can do. Permissions are grouped by feature, like **Chat**, **Contacts** or **Flows**.
+  </Step>
+  <Step title="Save" icon="save">
+    Click **Save**.
+  </Step>
+</Steps>
+
+### What the permissions mean
+
+Most features have the same four permissions:
+
+| Permission | What the person can do |
+|---|---|
+| **View** | See the page and its items. |
+| **Create** | Add new items. |
+| **Edit** | Change items. |
+| **Delete** | Remove items. |
+
+Some features have extra permissions:
+
+| Feature | Extra permission | What it allows |
+|---|---|---|
+| **Chat** | View own | See only chats assigned to them. |
+| **Chat** | Reply | Send messages from **Chat**. |
+| **Chat** | Assign | Assign chats to team members. |
+| **Contacts** | View own | See only contacts assigned to them. |
+| **Contacts** | Export | Download the contact list. |
+| **Channels** | Connect, Disconnect | Connect or disconnect Instagram and Facebook accounts. |
+| **Settings** | View, Edit | See or change workspace settings. |
+| **Billing** | View | See your plan, credits and invoices. |
+
+<Tip>
+  Use **View own** for sales or support staff. They see only their own chats and contacts, not everyone's.
+</Tip>
+
+### Example roles
+
+| Role | Good permissions to give |
+|---|---|
+| **Support** | Chat: View, Reply. Contacts: View. |
+| **Sales** | Chat: View own, Reply. Contacts: View own, Edit. |
+| **Manager** | Everything except Billing and Settings. |
+
+## Add a team member
+
+<Steps>
+  <Step title="Open Team" icon="users">
+    Click **Setup** in the left menu, then click **Team**.
+  </Step>
+  <Step title="Add a team member" icon="user-plus">
+    Click **Add Team**. The **Create Team Member** panel opens.
+  </Step>
+  <Step title="Fill in their details" icon="id-card">
+    On the **Team** tab, fill in:
+    - **Name**
+    - **Email:** they sign in with this email.
+    - **Phone** (optional)
+    - **Password** and **Confirm Password:** you choose their first password.
+
+    Click **Next**.
+  </Step>
+  <Step title="Choose their role" icon="shield">
+    On the **Role** tab, choose one:
+    - Turn on **Administrative Access** to give them full access to everything.
+    - Or choose a **Role**. Need a new one? Click **Add Role** right there.
+
+    Under **Permissions**, you can also change access for this one person:
+    - Untick a permission to take it away from them only.
+    - Tick an extra permission to give it to them only.
+  </Step>
+  <Step title="Save and share" icon="send">
+    - Click **Save**.
+    - Tell the team member their email and password.
+    - They sign in on the same sign-in page as you.
+  </Step>
+</Steps>
+
+<Check>
+  You created a role, added a team member with that role, and shared their sign-in details.
+</Check>
+
+<Note>
+  Comentify does not send an invite email. Share the email and password with your team member yourself. Ask them to change the password after they sign in.
+</Note>
+
+## Manage your team
+
+| What you want to do | How to do it |
+|---|---|
+| Change a team member's role | Click the menu (⋮) next to them, then **Edit**. |
+| Reset their password | Click **Edit** and type a new password. Leave it empty to keep the old one. |
+| Remove a team member | Click the menu (⋮), then **Delete**. |
+| See who uses a role | Open the role and look at **List of Users Using This Role**. |
+
+<Note>
+  You cannot edit your own account here. To change your own details, click your name at the bottom of the left menu, then **Account**.
+</Note>
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="What is the difference between an administrator and a role?">
+    - An administrator can do everything in the workspace.
+    - A role gives only the permissions you tick.
+    - The workspace owner is always an administrator.
+  </Accordion>
+  <Accordion title="Why can my team member not see a menu item?">
+    - Their role does not include **View** for that feature.
+    - Edit their role, or add the permission to them only.
+  </Accordion>
+  <Accordion title="If I change a role, does it change for everyone?">
+    - Yes. Everyone with that role gets the new permissions.
+    - Personal changes you made to one team member stay in place.
+  </Accordion>
+  <Accordion title="Do team members use my credits?">
+    - Yes. Messages your team sends from **Chat** use your workspace's credits.
+  </Accordion>
+  <Accordion title="Can a team member see billing?">
+    - Only if their role includes **Billing: View**, or they are an administrator.
+  </Accordion>
+</AccordionGroup>
+
+## Where to next
+
+<CardGroup cols={2}>
+  <Card title="Statuses, sources and groups" icon="list" href="/setup/statuses-sources-groups">
+    Create the labels your team uses to sort contacts.
+  </Card>
+  <Card title="Canned replies" icon="message-square-text" href="/setup/canned-replies">
+    Save replies your team can use in Chat.
+  </Card>
+</CardGroup>
