@@ -74,6 +74,14 @@
             ]
           },
           {
+            "group": "Settings",
+            "pages": [
+              "settings/workspace",
+              "settings/billing",
+              "settings/account"
+            ]
+          },
+          {
             "group": "AI Features",
             "pages": [
               "ai/overview",
@@ -89,8 +97,6 @@
           {
             "group": "Account & Billing",
             "pages": [
-              "account/plans",
-              "account/settings",
               "account/faq"
             ]
           }
@@ -121,7 +127,9 @@
     { "source": "/automation/comment-replies", "destination": "/automation/automations" },
     { "source": "/automation/dm-automation", "destination": "/automation/automations" },
     { "source": "/automation/workflows", "destination": "/automation/flows" },
-    { "source": "/team/team-access", "destination": "/setup/team-roles" }
+    { "source": "/team/team-access", "destination": "/setup/team-roles" },
+    { "source": "/account/plans", "destination": "/settings/billing" },
+    { "source": "/account/settings", "destination": "/settings/workspace" }
   ],
   "icons": {
     "library": "lucide"

@@ -1,0 +1,105 @@
+---
+title: "Workspace settings"
+sidebarTitle: "Workspace settings"
+icon: "settings"
+description: "Set your time zone and date format, choose defaults for new contacts, and change how Comentify looks."
+keywords: ["Comentify", "settings", "time zone", "date format", "contact defaults", "theme"]
+---
+
+Workspace settings control how Comentify works for your team.
+
+* **General:** Set your time zone, country, and date format.
+* **Miscellaneous:** Choose how many rows show in lists.
+* **Contact Defaults:** Set the details for new contacts.
+* **Theme:** Change the colors and style of the app.
+
+## Open settings
+
+In the left menu, click **Settings**. You will see two tabs:
+
+* **Core Platform:** **General**, **Miscellaneous**, and **Contact Defaults**.
+* **Billing:** Your plan, usage, credits, and invoices. Learn more in [Plan, credits & billing](/settings/billing).
+
+{/* Screenshot: Settings page with the Core Platform tab and General open */}
+
+## General
+
+Set your time zone and date format.
+
+| Setting         | What it does                                                                                                           |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| **Timezone**    | Sets the time zone used for dates and times in your workspace. Search for your city or time zone.                      |
+| **Country**     | Sets your workspace country.                                                                                           |
+| **Date Format** | Choose how dates are shown: **YYYY-MM-DD**, **DD/MM/YYYY**, **MM/DD/YYYY**, or a long format like "February 13, 2026". |
+| **Time Format** | Choose **24 hour** (like 14:30) or **12 hour (AM/PM)** (like 2:30 PM).                                                 |
+
+Click **Save Changes** when you are done.
+
+<Tip>
+  Set your time zone first. This keeps the times in **Chat**, **Contacts**, and logs correct.
+</Tip>
+
+## Miscellaneous
+
+**Tables Pagination Limit:** Sets how many rows appear on each page in lists like contacts and automations.
+
+## Contact Defaults
+
+Contact defaults are the details added when Comentify creates a new contact.
+
+<Steps>
+  <Step title="Open Contact Defaults" icon="user-plus">
+    Go to **Settings** → **Core Platform** → **Contact Defaults**.
+  </Step>
+  <Step title="Choose the defaults" icon="list-checks">
+    - **Type:** **Lead**, **Guest**, or **Customer**. The default is **Guest**.
+    - **Status:** The status given to new contacts.
+    - **Source:** Where the contact came from, like "Instagram".
+    - **Assign To:** The team member assigned to the contact. Leave it as **Unassigned** if needed.
+    - **Groups:** The groups in which new contacts are added to.
+    
+    You can create a new status, source, or group from the dropdown.
+  </Step>
+  <Step title="Save" icon="save">
+    Click save. You will see **Global defaults saved successfully.**
+  </Step>
+</Steps>
+
+<Note>
+  Defaults apply only when a contact is created. They do not change existing contacts.
+</Note>
+
+### Different defaults for one channel
+
+You can set different defaults for contacts from a specific channel. For example, Facebook contacts can have Source set to "Facebook".
+
+1. Go to **Channels**.
+2. Click the menu (⋮) next to the channel, then **Contact Defaults**.
+3. Turn on **Override global defaults**.
+4. Choose the defaults for this channel and save.
+
+When the switch is off, the channel uses the main defaults.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Why do times in Chat look wrong?">
+    - Your **Timezone** may be incorrect.
+    - Go to **Settings** → **General** and choose the correct time zone.
+  </Accordion>
+  <Accordion title="I changed Contact Defaults. Why did old contacts not change?">
+    - Defaults apply only to new contacts.
+    - To change existing contacts, edit them in **Contacts**.
+  </Accordion>
+</AccordionGroup>
+
+## Where to next
+
+<CardGroup cols={2}>
+  <Card title="Plan, credits & billing" icon="credit-card" href="/settings/billing">
+    See your plan, buy credits, and download invoices.
+  </Card>
+  <Card title="Your account" icon="circle-user" href="/settings/account">
+    Change your name, password, and two-step sign-in.
+  </Card>
+</CardGroup>
