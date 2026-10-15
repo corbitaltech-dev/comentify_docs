@@ -52,7 +52,7 @@
             "group": "Automations & Flows",
             "pages": [
               "automation/automations",
-              "automation/write-messages",
+              "automation/message-guidelines",
               "automation/flows",
               "automation/flow-steps",
               "automation/keyword-in-use"
@@ -104,6 +104,7 @@
   },
   "redirects": [
     { "source": "/connecting-accounts", "destination": "/channels/connect-accounts" },
+    { "source": "/automation/write-messages", "destination": "/automation/message-guidelines" },
     { "source": "/inbox/lead-capture", "destination": "/inbox/contacts" },
     { "source": "/automation/comment-replies", "destination": "/automation/automations" },
     { "source": "/automation/dm-automation", "destination": "/automation/automations" },
