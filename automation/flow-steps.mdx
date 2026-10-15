@@ -16,19 +16,19 @@ Each node helps you build a step-by-step conversation. For details about creatin
 
 ## All steps at a glance
 
-| Step                                            | What it does                                    | Waits for the person? | Has more than one path? |
+| Step                                            | What it does                                    | Waits for the customer? | Has more than one path? |
 | ----------------------------------------------- | ----------------------------------------------- | :-------------------: | :---------------------: |
 | [Trigger](#trigger)                             | Starts the flow.                                |           —           |            —            |
 | [Send a message](#send-a-message)               | Sends a message and continues.                  |           No          |            No           |
 | [Ask a question](#ask-a-question)               | Asks a question and saves the answer.           |          Yes          |            No           |
 | [Buttons](#buttons)                             | Shows up to 3 buttons, each with its own path.  |          Yes          |           Yes           |
 | [Collect an email](#collect-an-email)           | Asks for an email and saves it to the contact.  |          Yes          |            No           |
-| [Require a follow](#require-a-follow)           | Checks if the person follows you.               |          Yes          |           Yes           |
+| [Require a follow](#require-a-follow)           | Checks if the customer follows you.               |          Yes          |           Yes           |
 | [Send media](#send-media)                       | Sends a photo, video or audio file.             |           No          |            No           |
 | [Quick replies](#quick-replies)                 | Shows up to 13 choices, each with its own path. |          Yes          |           Yes           |
 | [Send a link button](#send-a-link-button)       | Sends buttons that open a web page.             |           No          |            No           |
 | [Branch on an answer](#branch-on-an-answer)     | Checks an answer and chooses a path.            |           No          |           Yes           |
-| [Update the contact](#update-the-contact)       | Updates the person's contact details.           |           No          |            No           |
+| [Update the contact](#update-the-contact)       | Updates the customer's contact details.           |           No          |            No           |
 | [Assign the chat](#assign-the-chat)             | Assigns the chat to a team member.              |           No          |            No           |
 | [Wait](#wait)                                   | Waits before continuing.                        |           No          |            No           |
 | [Hand over to a person](#hand-over-to-a-person) | Stops the flow and asks your team to reply.     |           —           |            —            |
@@ -47,7 +47,7 @@ Each node helps you build a step-by-step conversation. For details about creatin
 * **Keywords:** the words that start the flow.
 * **Which posts?:** **All posts** or **A specific post** (comment triggers only).
 * **Case-sensitive matching:** "Sale" does not match "sale".
-* **First interaction only:** start only on the person's first comment or message. Choose what counts under **Counted as their first**.
+* **First interaction only:** start only on the customer's first comment or message. Choose what counts under **Counted as their first**.
 * **Contact types:** start only for **Lead**, **Guest** or **Customer**. Leave empty for everyone.
 
 <Note>
@@ -60,18 +60,18 @@ Each node helps you build a step-by-step conversation. For details about creatin
 
 **Settings:**
 
-* **Message** (required): write what you want to say. Type `@` to add the person's name.
+* **Message** (required): write what you want to say. Type `@` to add the customer's name.
 
 **Use it for:** greetings, thank-you messages and information.
 
 ## Ask a question
 
-**What it does:** asks a question, waits for the person to type an answer, and saves the answer.
+**What it does:** asks a question, waits for the customer to type an answer, and saves the answer.
 
 **Settings:**
 
 * **Message** (required): write your question.
-* **Save the answer as:** a key, which is a short name for the answer, like `city` or `phone`. Comentify stores the person's answer under this key.
+* **Save the answer as:** a key, which is a short name for the answer, like `city` or `phone`. Comentify stores the customer's answer under this key.
   * Use only letters, numbers and `_`.
   * Start with a letter.
   * Give each question its own key, so answers do not mix up.
@@ -84,7 +84,7 @@ After you save the key, the answer shows in the merge field picker in this flow.
 2. Look for `answer.` followed by your key, like `answer.city`.
 3. Click it. Comentify adds `{{answer.city}}` to your message.
 
-When the flow runs, Comentify swaps `{{answer.city}}` for what the person answer.
+When the flow runs, Comentify swaps `{{answer.city}}` for what the customer answered.
 
 <Note>
   The picker shows one `answer.` entry for every **Ask a question** step in the flow. If your flow has a **Collect an email** step, you also see `answer.email`.
@@ -104,7 +104,7 @@ When the flow runs, Comentify swaps `{{answer.city}}` for what the person answer
 
 **Settings:**
 
-* **Message above the buttons** (required): the text the person sees above the buttons, like "Do you want the price list?"
+* **Message above the buttons** (required): the text the customer sees above the buttons, like "Do you want the price list?"
 * Click **Add** to add a button. You can add up to 3.
 
 **Settings for each button:**
@@ -118,7 +118,7 @@ Each button has its own line on the board. Connect each line to the next step.
 
 ## Collect an email
 
-**What it does:** asks for an email, waits for it and saves it to the person's contact.
+**What it does:** asks for an email, waits for it and saves it to the customer's contact.
 
 **Settings:**
 
@@ -131,11 +131,11 @@ Each button has its own line on the board. Connect each line to the next step.
 
 ## Require a follow
 
-**What it does:** checks if the person follows your Instagram account and follows the correct path.
+**What it does:** checks if the customer follows your Instagram account and follows the correct path.
 
 **Settings:**
 
-* **Message** (required): tell the person why they should follow you. They see it if they do not follow you yet.
+* **Message** (required): tell the customer why they should follow you. They see it if they do not follow you yet.
 * **Button label:** the button they tap after following, such as "I've followed". Tapping it checks again.
 * **Visit profile button** (optional): opens your Instagram profile.
 * **Extra link button** (optional): opens a web page. The link must start with `https://`.
@@ -157,19 +157,19 @@ Each button has its own line on the board. Connect each line to the next step.
 
 ## Quick replies
 
-**What it does:** shows up to 13 choices. The person taps one and the flow follows its path.
+**What it does:** shows up to 13 choices. The customer taps one and the flow follows its path.
 
 **Settings:**
 
-* **Message above the quick replies** (required): the text the person sees above the choices, like "Which size do you need?"
+* **Message above the quick replies** (required): the text the customer sees above the choices, like "Which size do you need?"
 * Add up to 13 choices.
 
 **Settings for each choice:**
 
-* **Label:** the text shown to the person. Up to 20 characters.
+* **Label:** the text shown to the customer. Up to 20 characters.
 * **Value:** the name of the path.
 
-The choices disappear after the person selects one.
+The choices disappear after the customer selects one.
 
 ## Send a link button
 
@@ -177,16 +177,16 @@ The choices disappear after the person selects one.
 
 **Settings:**
 
-* **Message above the buttons** (required): the text the person sees above the link buttons.
+* **Message above the buttons** (required): the text the customer sees above the link buttons.
 * Add link buttons with a label, such as "Shop now", and a link. Links must start with `https://`.
 
 **Use it for:** shop links, booking pages and downloads.
 
 ## Branch on an answer
 
-**What it does:** looks at what the person typed earlier, and sends them down one of two paths: **Yes** or **No**.
+**What it does:** looks at what the customer typed earlier, and sends them down one of two paths: **Yes** or **No**.
 
-Think of it as a question Comentify asks itself: *"Did the person's answer match what I am looking for?"*
+Think of it as a question Comentify asks itself: *"Did the customer's answer match what I am looking for?"*
 
 - If it matches, the flow goes down the **Yes** path.
 - If it does not match, the flow goes down the **No** path.
@@ -207,13 +207,13 @@ Read the three boxes together, like one sentence: **Look at** `city` **Which** `
 
 ### The choices in "Which"
 
-| Choice | Goes down **Yes** when… | Example: the person typed "I live in Mumbai" |
+| Choice | Goes down **Yes** when… | Example: the customer typed "I live in Mumbai" |
 |---|---|---|
 | **contains** | the answer has your word anywhere in it. | **This** `Mumbai` → **Yes** |
 | **is exactly** | the answer is only your word, nothing more. | **This** `Mumbai` → **No**, because the answer has more words |
 | **is not** | the answer is anything other than your word. | **This** `Mumbai` → **Yes** |
-| **is empty** | the person gave no answer. | → **No** |
-| **is not empty** | the person gave any answer. | → **Yes** |
+| **is empty** | the customer gave no answer. | → **No** |
+| **is not empty** | the customer gave any answer. | → **Yes** |
 
 For **is empty** and **is not empty**, leave **This** blank. There is nothing to compare.
 
@@ -238,13 +238,13 @@ On the board, this step has two lines: **Yes** and **No**. Join each line to the
 
 ## Update the contact
 
-**What it does:** updates the person's details in **Contacts**.
+**What it does:** updates the customer's details in **Contacts**.
 
 **Settings:** fill in only the details you want to change:
 
 * **First name**, **Last name**, **Email**, **Phone**
 * **Type**, **Status**, **Source**
-* **Groups:** adds the person to these groups. It does not remove them from other groups.
+* **Groups:** adds the customer to these groups. It does not remove them from other groups.
 
 Empty fields stay unchanged.
 
@@ -259,7 +259,7 @@ Empty fields stay unchanged.
 * Choose the team member.
 
 <Note>
-  If the flow started from a comment and the person has not replied yet, there is no chat to assign. Comentify skips this step.
+  If the flow started from a comment and the customer has not replied yet, there is no chat to assign. Comentify skips this step.
 </Note>
 
 ## Wait
@@ -271,7 +271,7 @@ Empty fields stay unchanged.
 * **Wait for:** choose how long to wait. The maximum is 23 hours, 59 minutes and 59 seconds.
 
 <Note>
-  Meta allows messages only within 24 hours of the person's last message.
+  Meta allows messages only within 24 hours of the customer's last message.
 </Note>
 
 ## Hand over to a person
@@ -282,7 +282,7 @@ Empty fields stay unchanged.
 
 **Tip:** Add a **Send a message** step before it, such as "Thanks! A team member will reply soon."
 
-Learn more: [Chat](/inbox/shared-inbox#when-a-person-needs-you)
+Learn more: [Chat](/inbox/shared-inbox#when-a-customer-needs-you)
 
 ## End
 

@@ -54,12 +54,12 @@ The automation type decides what starts it and what Comentify sends.
 
 | Type | Starts when… | Comentify sends… | Works on |
 |---|---|---|---|
-| **Comment → DM** | someone comments on your post. | a private DM to that person. | Instagram and Facebook |
+| **Comment → DM** | someone comments on your post. | a private DM to that customer. | Instagram and Facebook |
 | **Comment auto-reply** | someone comments on your post. | a public reply under their comment. | Instagram and Facebook |
 | **DM auto-reply** | someone sends you a DM. | a DM back. | Instagram and Facebook |
-| **Mention** | someone @mentions you in a comment. | a DM to that person. | Instagram only |
-| **Story mention** | someone mentions you in their story. | a DM to that person. | Instagram only |
-| **Story reply** | someone replies to your story. | a DM to that person. | Instagram only |
+| **Mention** | someone @mentions you in a comment. | a DM to that customer. | Instagram only |
+| **Story mention** | someone mentions you in their story. | a DM to that customer. | Instagram only |
+| **Story reply** | someone replies to your story. | a DM to that customer. | Instagram only |
 
 <Tip>
   To send both a public reply and a DM for the same comment, create two automations: **Comment auto-reply** and **Comment → DM**. You can use the same keyword in both.
@@ -118,7 +118,7 @@ Choose **when** the automation should run.
   </Step>
 
   <Step title="Set extra options" icon="settings-2">
-    - **Only on first interaction:** reply only to the person's first comment or message.
+    - **Only on first interaction:** reply only to the customer's first comment or message.
       - For comments, choose **First on this account** or **First on this post**.
     - **Case-sensitive matching:** "Sale" does not match "sale". Leave this off unless you need case-sensitive matching.
   </Step>
@@ -137,7 +137,7 @@ Choose **what** Comentify sends.
 - **Comment auto-reply** shows **Public reply**.
 - **Mention** also shows **Public reply**, but Comentify sends it as a DM.
 - Other automation types show **Direct message**.
-- Write your message and add the person's name, buttons, photos, and more.
+- Write your message and add the customer's name, buttons, photos, and more.
 - Click **Add variation** to add different versions of the message. Comentify uses a different version each time.
 
 Learn more in [Message guidelines](/automation/message-guidelines).
@@ -194,9 +194,9 @@ Use the **Not currently running** filter to find these automations.
 Some comments and messages may not receive a reply because of Meta's rules.
 
 - **One private reply per comment:** Meta allows only one DM for each comment.
-- **24-hour window:** a DM can be sent only within 24 hours of the person's last message.
+- **24-hour window:** a DM can be sent only within 24 hours of the customer's last message.
 
-Comentify also skips a person when:
+Comentify also skips a customer when:
 
 - A team member replied to them in **Chat** within the last 24 hours.
 - Their **Active** switch is off in **Contacts**.

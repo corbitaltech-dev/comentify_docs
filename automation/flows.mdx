@@ -12,14 +12,14 @@ A **flow** helps you create a conversation with multiple steps.
 
 - **Ask questions:** Ask people questions and get their answers.
 - **Collect information:** Collect details such as email addresses.
-- **Send messages:** Send messages based on the person's answers.
+- **Send messages:** Send messages based on the customer's answers.
 
 **Example:** Someone comments **guide** on your post.
 
 1. Comentify sends them a DM asking if they want the free guide.
-2. The person replies **YES**.
+2. The customer replies **YES**.
 3. Comentify asks for their email address.
-4. The person shares their email address.
+4. The customer shares their email address.
 5. Comentify sends them the guide link.
 
 You can create different flows to answer questions, collect information, and help people automatically.
@@ -147,18 +147,18 @@ The builder checks your flow while you work. A step with a problem shows a warni
 Meta allows only one plain-text private reply to each comment. So a flow with a **Comment → DM** trigger must:
 
 * start with a plain-text **Send a message** or **Ask a question** step, with no buttons, media or links.
-* send only one message before waiting for the person to reply.
+* send only one message before waiting for the customer to reply.
 
-After the person replies, the flow can send buttons, media and other message types.
+After the customer replies, the flow can send buttons, media and other message types.
 
 <Tip>
-  A good first message: "Thanks for your comment! Reply YES and I'll send you the link." After the person replies, the flow can continue with buttons, media and other steps.
+  A good first message: "Thanks for your comment! Reply YES and I'll send you the link." After the customer replies, the flow can continue with buttons, media and other steps.
 </Tip>
 
 ## How flows behave
 
-* **One flow at a time.** A person can only be in one flow at a time.
-* **Waiting for an answer.** If the person does not reply within 24 hours, the flow stops.
+* **One flow at a time.** A customer can only be in one flow at a time.
+* **Waiting for an answer.** If the customer does not reply within 24 hours, the flow stops.
 * **When you reply yourself.** If a team member replies in **Chat**, the flow pauses for that chat for 24 hours.
 * **Changes go live at once.** When you save a published flow, the changes are active immediately. Use **Try it** before saving.
 * **Ice breakers.** An ice breaker can start a published flow. Learn more in [Ice breakers](/channels/ice-breakers).
@@ -182,7 +182,7 @@ A **Not running** badge means the flow is published but cannot run. For example,
   <Accordion title="Why did my flow not start?">
     - Check that the **Published** switch is on.
     - Check that the trigger is set up and the keyword matches.
-    - Check that the person is not already in another flow.
+    - Check that the customer is not already in another flow.
     - Check that a team member did not reply in **Chat** in the last 24 hours.
   </Accordion>
   <Accordion title="Can an automation and a flow use the same keyword?">

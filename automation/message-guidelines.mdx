@@ -10,7 +10,7 @@ Refer this page to learn how to create messages in Comentify.
 
 * Create messages in **Automations**, **Flows**, **Ice Breakers** and **Chat**.
 * Add text, photos, videos, audio, files, buttons and quick replies.
-* Use merge fields to add the person's name and other details.
+* Use merge fields to add the customer's name and other details.
 
 {/* Screenshot: Content step of an automation with the message editor and Live Preview */}
 
@@ -18,7 +18,7 @@ Refer this page to learn how to create messages in Comentify.
 
 <CardGroup cols={2}>
   <Card title="Personal messages" icon="user">
-    Add the person's name and other details using `@`.
+    Add the customer's name and other details using `@`.
   </Card>
   <Card title="Rich messages" icon="image">
     Add photos, videos, audio, files and buttons.
@@ -102,7 +102,7 @@ Some messages can only contain plain text. In these cases, you cannot add media 
 
 Type `@` in the message box to add a **merge field**.
 
-A merge field is replaced with the person's real information when the message is sent.
+A merge field is replaced with the customer's real information when the message is sent.
 
 For example:
 
@@ -114,15 +114,15 @@ can become:
 
 | Merge field            | Shows                                          |
 | ---------------------- | ---------------------------------------------- |
-| `{{first_name}}`       | Person's first name                            |
-| `{{last_name}}`        | Person's last name                             |
-| `{{name}}`             | Person's full name                             |
+| `{{first_name}}`       | Customer's first name                            |
+| `{{last_name}}`        | Customer's last name                             |
+| `{{name}}`             | Customer's full name                             |
 | `{{username}}`         | Instagram username *(Instagram only)*          |
 | `{{account_name}}`     | Your account name                              |
 | `{{account_username}}` | Your Instagram username *(Instagram only)*     |
-| `{{keyword}}`          | Keyword used by the person                     |
+| `{{keyword}}`          | Keyword used by the customer                     |
 | `{{comment_text}}`     | Full comment text                              |
-| `{{follower_count}}`   | Person's follower count *(Instagram DMs only)* |
+| `{{follower_count}}`   | Customer's follower count *(Instagram DMs only)* |
 
 ### Add a fallback
 
@@ -134,7 +134,7 @@ For example:
 
 `{{first_name|there}}`
 
-This shows the person's name if available. If not, it shows **there**.
+This shows the customer's name if available. If not, it shows **there**.
 
 `Hi {{first_name|there}}!`
 
@@ -155,7 +155,7 @@ For example:
 
 `{{answer.email}}`
 
-shows the email entered by the person.
+shows the email entered by the customer.
 
 Learn more in [Flow steps](/automation/flow-steps#ask-a-question).
 
@@ -175,19 +175,19 @@ You can use **one gate at a time**.
 
 <AccordionGroup>
   <Accordion title="Require a follow" icon="user-check">
-    Send the message only after the person follows you.
+    Send the message only after the customer follows you.
     1. Turn on **Require a follow**.
     2. Write the message in **What should we ask them?**
     3. Add a **Confirm button label**, such as `I've followed`.
     4. Optionally add a **Visit profile** button or custom link.
-    The person follows you and taps the confirmation button. Comentify then checks the follow and sends your message.
+    The customer follows you and taps the confirmation button. Comentify then checks the follow and sends your message.
     <Note>
       This works only on Instagram. Meta does not provide follow information for Facebook Pages.
     </Note>
   </Accordion>
 
   <Accordion title="Collect an email" icon="mail">
-    Ask for the person's email before sending your message.
+    Ask for the customer's email before sending your message.
     1. Turn on **Collect an email**.
     2. Choose **Required to continue** or **Optional**.
     3. Write your question in **What should we ask them?**
@@ -226,7 +226,7 @@ Merge fields are shown with a sample name:
   </Accordion>
 
   <Accordion title="Why is the name missing?">
-    - Comentify may not have received the person's name from Meta.
+    - Comentify may not have received the customer's name from Meta.
     - Use a fallback such as `{{first_name|there}}`.
   </Accordion>
 
